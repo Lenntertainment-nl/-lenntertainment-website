@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Websitebeheer | Lenntertainment Admin</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+<div class="wrap top">
+  <div class="brand">LENNTERTAINMENT · ADMIN</div>
+  <div class="badge">Intern</div>
+</div>
+
+<main class="wrap">
+
+  <section class="lead">
+    <h1>Websitebeheer</h1>
+    <p>Beheer hier de inhoud van Lenntertainment.</p>
+  </section>
+
+  <div class="card">
+    <h2>Teksten</h2>
+    <p>Wijzig teksten op de website.</p>
+    <button type="button" onclick="toggleTeksten()">Teksten beheren</button>
+
+    <div id="tekstenBeheer" style="display:none; margin-top:20px;">
+
+      <h2>Home</h2>
+
+      <p>
+        <label for="homeIntro">Introductietekst</label>
+      </p>
+
+      <textarea
+        id="homeIntro"
+        rows="5"
+        style="width:100%; box-sizing:border-box;"
+      >Een creatieve onderneming rond muziek, entertainment, horeca, events en ideeën die niet in één hokje hoeven te passen.</textarea>
+
+      <p>
+        <label for="homeButton">Tekst van de knop</label>
+      </p>
+
+      <input
+        id="homeButton"
+        type="text"
+        value="ONTDEK DE WERELDEN ↓"
+        style="width:100%; box-sizing:border-box;"
+      >
+
+      <p style="margin-top:18px;">
+        <button type="button" onclick="bewaarTeksten()">Wijzigingen bewaren</button>
+      </p>
+
+      <p id="meldingTeksten" class="note"></p>
+
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Platforms</h2>
+    <p>Platforms toevoegen, wijzigen of tijdelijk verbergen.</p>
+    <button type="button">Platforms beheren</button>
+  </div>
+
+  <div class="card">
+    <h2>Foto's &amp; logo's</h2>
+    <p>Afbeeldingen en logo's van de website aanpassen.</p>
+    <button type="button">Media beheren</button>
+  </div>
+
+  <div class="card">
+    <h2>Achtergronden</h2>
+    <p>Kies per onderdeel een afbeelding of video als achtergrond.</p>
+    <button type="button">Achtergronden beheren</button>
+  </div>
+
+  <div class="card">
+    <h2>Contactgegevens</h2>
+    <p>Contactgegevens en bijbehorende links wijzigen.</p>
+    <button type="button">Contact beheren</button>
+  </div>
+
+  <div class="card">
+    <h2>Records &amp; artiesten</h2>
+    <p>Artiesten en releases toevoegen, wijzigen of verbergen.</p>
+    <button type="button">Records beheren</button>
+  </div>
+
+  <div class="card">
+    <h2>Links &amp; statussen</h2>
+    <p>Links, zichtbaarheid en statussen beheren.</p>
+    <button type="button">Links beheren</button>
+  </div>
+
+  <div class="card">
+    <h2>Website publiceren</h2>
+    <p>
+      Hier komt de koppeling waarmee wijzigingen daadwerkelijk
+      naar de website worden gepubliceerd.
+    </p>
+    <button type="button">Opslaan / Publiceren</button>
+    <p class="note">
+      De publicatiefunctie wordt later veilig gekoppeld.
+    </p>
+  </div>
+
+  <p>
+    <a href="index.html">← Terug naar Admin</a>
+  </p>
+
+</main>
+
+<script>
+function toggleTeksten() {
+  const blok = document.getElementById("tekstenBeheer");
+
+  if (blok.style.display === "none") {
+    blok.style.display = "block";
+  } else {
+    blok.style.display = "none";
+  }
+}
+
+function bewaarTeksten() {
+  const intro = document.getElementById("homeIntro").value;
+  const knop = document.getElementById("homeButton").value;
+
+  localStorage.setItem("lenntertainment_home_intro", intro);
+  localStorage.setItem("lenntertainment_home_button", knop);
+
+  document.getElementById("meldingTeksten").textContent =
+    "Wijzigingen zijn voorlopig lokaal bewaard ✓";
+}
+
+window.addEventListener("DOMContentLoaded", function () {
+  const intro = localStorage.getItem("lenntertainment_home_intro");
+  const knop = localStorage.getItem("lenntertainment_home_button");
+
+  if (intro !== null) {
+    document.getElementById("homeIntro").value = intro;
+  }
+
+  if (knop !== null) {
+    document.getElementById("homeButton").value = knop;
+  }
+});
+</script>
+
+</body>
+</html>
