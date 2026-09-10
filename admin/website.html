@@ -130,8 +130,11 @@ function bewaarTeksten() {
   const intro = document.getElementById("homeIntro").value;
   const knop = document.getElementById("homeButton").value;
 
-  localStorage.setItem("lenntertainment_home_intro", intro);
-  localStorage.setItem("lenntertainment_home_button", knop);
+fetch("/api/update-content", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ intro: intro, knop: knop })
+});
 
   document.getElementById("meldingTeksten").textContent =
     "Wijzigingen zijn voorlopig lokaal bewaard ✓";
