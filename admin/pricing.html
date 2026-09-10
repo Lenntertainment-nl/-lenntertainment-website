@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Admin · Prijsberekening · Lenntertainment</title>
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+<div class="wrap top">
+  <div class="brand">LENNTERTAINMENT · ADMIN</div>
+  <div class="badge">Intern</div>
+</div>
+<main class="wrap">
+  <h1>Prijsberekening</h1>
+  <p class="lead">Interne calculatietool per platform en per opdracht. Verkoopprijzen, kostprijzen, marge, korting en btw worden direct doorgerekend.</p>
+
+  <div class="grid">
+    <section class="card">
+      <h2>Opdracht</h2>
+      <div class="row">
+        <div><label>Platform</label><select id="platform">
+          <option>Lenntertainment</option>
+          <option>Spin My Wedding</option>
+          <option>DJ Le Nerd</option>
+          <option>Lenntertainment Records</option>
+          <option>The Liquid Society</option>
+          <option>Zakelijk</option>
+        </select></div>
+        <div><label>Opdrachtnaam</label><input id="opdracht" placeholder="Bijv. Bruiloft Jansen"></div>
+      </div>
+      <div class="row">
+        <div><label>Klant</label><input id="klant" placeholder="Naam klant / bedrijf"></div>
+        <div><label>Korting %</label><input id="discount" type="number" min="0" max="100" step="0.1" value="0"></div>
+      </div>
+
+      <div class="row3">
+        <label>Omschrijving</label><label>Aantal</label><label>Prijs ex. btw</label><label>Kostprijs</label>
+      </div>
+      <div id="items" class="items"></div>
+      <button id="addItem" class="secondary">+ Regel toevoegen</button>
+
+      <div class="btns">
+        <button id="saveCalc">Berekening opslaan</button>
+        <button id="exportCalc" class="secondary">Exporteer JSON</button>
+        <button id="printCalc" class="secondary">Print / PDF</button>
+        <button id="resetCalc" class="danger">Nieuwe berekening</button>
+      </div>
+    </section>
+
+    <aside>
+      <section class="card">
+        <h2>Resultaat</h2>
+        <div class="kpi">
+          <div><small>Omzet ex. btw</small><strong id="revenue">€ 0,00</strong></div>
+          <div><small>Interne kosten</small><strong id="costs">€ 0,00</strong></div>
+        </div>
+        <div class="totalbox">
+          <div class="total-line margin"><span>Brutomarge</span><strong id="margin" class="good">€ 0,00</strong></div>
+          <div class="total-line"><span>Marge %</span><strong id="marginpct">0,0%</strong></div>
+          <div class="total-line"><span>Btw</span><span><input id="vat" type="number" min="0" step="0.1" value="21" style="width:72px"> %</span></div>
+          <div class="total-line"><span>Btw-bedrag</span><strong id="vatamount">€ 0,00</strong></div>
+          <div class="total-line big"><span>Totaal incl. btw</span><strong id="total">€ 0,00</strong></div>
+        </div>
+      </section>
+
+      <section class="card settings">
+        <h2>Interne standaardtarieven · <span style="color:#999">verkoop / kost</span></h2>
+        <div id="presetSettings"></div>
+        <div class="btns"><button id="resetPresets" class="secondary">Tarieven resetten</button></div>
+        <p class="note">Ik heb bewust geen bedragen voor je verzonnen. Vul hier per platform je eigen standaard verkoop- en kostprijzen in. Ze worden alleen in deze browser opgeslagen.</p>
+      </section>
+
+      <section class="card saved">
+        <h2>Opgeslagen berekeningen</h2>
+        <div id="saved"></div>
+      </section>
+
+      <p class="note"><strong>Beveiliging:</strong> deze pagina staat niet in de publieke navigatie en is gemarkeerd als noindex. Een statische website kan echter niet zelf garanderen dat een URL geheim blijft. Bij livegang moet <code>/admin/</code> achter echte login/toegangsbeveiliging worden gezet.</p>
+    </aside>
+  </div>
+</main>
+<script src="pricing.js"></script>
+</body>
+</html>

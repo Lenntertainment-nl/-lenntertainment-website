@@ -1,0 +1,26 @@
+<!doctype html><html lang="nl"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>Admin AI · Lenntertainment</title><link rel="stylesheet" href="admin.css"></head><body>
+<div class="wrap top"><div class="brand">LENNTERTAINMENT · ADMIN</div><div class="badge">AI ASSISTENT</div></div>
+<main class="wrap">
+<h1>Interne AI-assistent</h1>
+<p class="lead">Voor calculaties, offertevoorbereiding en interne vragen. De veilige backend-koppeling volgt bij livegang.</p>
+<div class="ai-admin-grid">
+<section class="card">
+ <h2>Waarmee kan hij straks helpen?</h2>
+ <p>Prijsberekeningen interpreteren, offerte-input structureren, platforminformatie gebruiken en conceptteksten voorbereiden.</p>
+ <div class="quick">
+  <button class="secondary" data-admin-prompt="Help mij een offerte voorbereiden">Offerte voorbereiden</button>
+  <button class="secondary" data-admin-prompt="Hoe bewaak ik mijn marge?">Marge bewaken</button>
+  <button class="secondary" data-admin-prompt="Welke kostenposten gebruik ik voor Spin My Wedding?">Spin My Wedding</button>
+  <button class="secondary" data-admin-prompt="Welke kostenposten gebruik ik voor The Liquid Society?">The Liquid Society</button>
+ </div>
+ <p class="note">Er wordt nu nog geen bedrijfsdata naar een extern AI-model gestuurd. Dat doen we pas na veilige server-side configuratie.</p>
+</section>
+<section class="card ai-admin-chat">
+ <h2>Chat</h2>
+ <div id="admin-ai-messages" class="ai-admin-messages"><div class="ai-admin-msg bot">Ik ben de interne Lenntertainment-assistent in testmodus. Stel gerust een vraag.</div></div>
+ <form id="admin-ai-form" class="ai-admin-form"><textarea id="admin-ai-input" placeholder="Bijv. help mij een offerte voor een bruiloft voorbereiden"></textarea><button type="submit">Stuur</button></form>
+</section>
+</div>
+</main><script src="admin-ai.js"></script></body></html>

@@ -1,0 +1,80 @@
+{
+  "site": {
+    "name": "Lenntertainment",
+    "email": "info@lenntertainment.nl",
+    "phone": "06 81142517",
+    "kvk": "97696013",
+    "vat": "NL005283525B76",
+    "strapline": "Music. Events. Hospitality. Creative."
+  },
+  "home": {
+    "intro": "Een creatieve onderneming rond muziek, entertainment, horeca, events en ideeën die niet in één hokje hoeven te passen.",
+    "quote": "Elke dag spaghetti eten gaat uiteindelijk ook vervelen."
+  },
+  "platforms": [
+    {
+      "name": "Spin My Wedding",
+      "status": "Actief",
+      "url": "https://spinmywedding.nl",
+      "email": "info@spinmywedding.nl",
+      "image": "assets/images/spin-my-wedding.png",
+      "description": "Complete wedding DJ-show met persoonlijke voorbereiding, professioneel licht en geluid en een verzorgde presentatie."
+    },
+    {
+      "name": "DJ Le Nerd",
+      "status": "Actief",
+      "url": "https://djlenerd.com",
+      "email": "info@djlenerd.com",
+      "image": "assets/images/dj-le-nerd.png",
+      "description": "Artist, DJ, producer en songwriter. Het artiestenalias van Lennart De Roo, met eigen tracks via DistroKid op de grote muziekplatforms.",
+      "tags": [
+        "Artist",
+        "DJ",
+        "Producer",
+        "Songwriter"
+      ],
+      "distribution": "DistroKid"
+    },
+    {
+      "name": "Lenntertainment Records",
+      "status": "In ontwikkeling",
+      "url": "records.html",
+      "email": "info@lenntertainment.nl",
+      "image": ""
+    },
+    {
+      "name": "The Liquid Society",
+      "status": "Coming soon",
+      "url": "#",
+      "email": "info@theliquidsociety.nl",
+      "image": "assets/images/the-liquid-society.png",
+      "description": "Cocktail- en hospitalitymerk voor events én digitale instructiecontent om via YouTube zelf cocktails te leren maken.",
+      "tags": [
+        "Cocktails",
+        "Hospitality",
+        "Events",
+        "YouTube",
+        "Learn"
+      ]
+    }
+  ],
+  "contact_categories": [
+    "Lenntertainment",
+    "Spin My Wedding",
+    "DJ Le Nerd",
+    "Lenntertainment Records",
+    "The Liquid Society",
+    "Zakelijk"
+  ],
+  "about": {
+    "title": "Verschillende werelden. Dezelfde energie.",
+    "bio": "Lenntertainment is een creatieve onderneming op het snijvlak van muziek, entertainment, hospitality, events en conceptontwikkeling."
+  },
+  "people": {
+    "lennart_de_roo": {
+      "role": "Founder / creator",
+      "dj_alias": "DJ Le Nerd",
+      "buma_stemra": "Geregistreerd als tekstschrijver bij Buma/Stemra"
+    }
+  }
+}
