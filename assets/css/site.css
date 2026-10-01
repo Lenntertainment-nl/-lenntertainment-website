@@ -459,9 +459,21 @@ textarea{min-height:160px;resize:vertical} option{color:#111}
 }
 
 .new-platform-card.lenneration .new-platform-logo img {
-  width: 82%;
+  width: 100%;
   max-width: 520px;
   max-height: none;
+  transform: translateY(-55px);
+}
+.new-platform-card.lenneration .new-card-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.new-platform-card.lenneration .new-card-logo img {
+    width: 95%;
+    max-width: 650px;
+    transform: translateY(-25px);
 }
 
 
@@ -612,7 +624,9 @@ textarea{min-height:160px;resize:vertical} option{color:#111}
 
 .new-home {
   margin: 0;
-  background: #080808;
+  background:
+  radial-gradient(circle at 85% 10%, rgba(141, 61, 12, 0.32) 0%, rgba(141, 61, 12, 0.12) 28%, transparent 55%),
+  #080808;
   color: #f7f2e9;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -693,8 +707,10 @@ textarea{min-height:160px;resize:vertical} option{color:#111}
   min-height: 620px;
   padding: 135px 4% 60px;
   display: grid;
-  grid-template-columns: 1.05fr .95fr;
+
+ grid-template-columns: 1.05fr .95fr;
   align-items: center;
+  text-align: left;
   position: relative;
   overflow: hidden;
 
@@ -712,6 +728,7 @@ textarea{min-height:160px;resize:vertical} option{color:#111}
       transparent 35%
     ),
     #080808;
+
 }
 
 .new-hero::after {
@@ -733,7 +750,7 @@ textarea{min-height:160px;resize:vertical} option{color:#111}
 .new-hero-copy h1 {
   margin: 0 0 24px;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(62px, 6.2vw, 108px);
+font-size: clamp(52px, 5vw, 82px);
   line-height: .88;
   font-weight: 400;
   letter-spacing: -.045em;
@@ -745,11 +762,12 @@ textarea{min-height:160px;resize:vertical} option{color:#111}
 }
 
 .new-hero-copy > p {
-  max-width: 720px;
-  margin: 0;
-  font-size: 17px;
-  line-height: 1.55;
-  color: rgba(255,255,255,.86);
+    max-width: 590px;
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.7;
+    font-weight: 400;
+    color: rgba(255,255,255,.78);
 }
 
 .new-hero-buttons {
@@ -881,26 +899,25 @@ textarea{min-height:160px;resize:vertical} option{color:#111}
 
 .new-card.spin {
   background:
-    radial-gradient(circle at 45% 25%, rgba(83,61,177,.65), transparent 55%),
-    linear-gradient(135deg, #21164b, #080808);
+    linear-gradient(rgba(12, 5, 25, .25), rgba(12, 5, 25, .55)),
+    url("../images/spin-my-wedding-bg.png") center center / cover no-repeat;
 }
 
 .new-card.nerd {
   background:
-    radial-gradient(circle at 75% 20%, rgba(24,82,122,.55), transparent 45%),
-    #090b0d;
+    linear-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .55)),
+    url("../images/dj-le-nerd-bg.png") 70% center / cover no-repeat;
 }
 
 .new-card.records {
   background:
-    radial-gradient(circle at 65% 20%, rgba(147,82,18,.28), transparent 48%),
-    #080808;
+    linear-gradient(rgba(0,0,0,.18), rgba(0,0,0,.48)),
+    url("../images/lenntertainment-records-bg.png") center center / cover no-repeat;
 }
-
 .new-card.liquid {
   background:
-    radial-gradient(circle at 70% 20%, rgba(150,88,31,.32), transparent 48%),
-    #100b08;
+    linear-gradient(rgba(0,0,0,.15), rgba(0,0,0,.48)),
+    url("../images/the-liquid-society-bg.png") center center / cover no-repeat;
 }
 
 
@@ -925,8 +942,9 @@ textarea{min-height:160px;resize:vertical} option{color:#111}
 
 .new-card.horeca {
   background:
-    linear-gradient(90deg, rgba(246,239,226,.98), rgba(238,228,211,.96));
-  color: #171717;
+    linear-gradient(rgba(0, 0, 0, .12), rgba(0, 0, 0, .45)),
+    url("../images/horeca-mattie-bg.png") center center / cover no-repeat;
+  color: #fff;
 }
 
 .new-card.horeca .new-card-copy p {
@@ -937,11 +955,14 @@ textarea{min-height:160px;resize:vertical} option{color:#111}
   color: #8D3D0C;
   border-color: #c58b3c;
 }
+.new-card.horeca .new-arrow {
+    display: none;
+}
 
 .new-card.lenneration {
   background:
-    radial-gradient(circle at 75% 40%, rgba(150,73,25,.22), transparent 45%),
-    linear-gradient(110deg, #080808, #11100f);
+    linear-gradient(rgba(0,0,0,.20), rgba(0,0,0,.48)),
+    url("../images/lenneration-bg.png") center center / cover no-repeat;
 }
 
 .new-card.lenneration .new-card-logo img {
@@ -952,9 +973,12 @@ textarea{min-height:160px;resize:vertical} option{color:#111}
 /* ABOUT */
 
 .new-about {
+  margin-top: 100px;
   min-height: 300px;
   padding: 48px 5%;
-  background: #f3eee5;
+  background:
+  linear-gradient(rgba(5,8,10,.82), rgba(5,8,10,.82)),
+  url("../images/lenntertainment-about-bg.png") center center / cover no-repeat;
   color: #151515;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -969,6 +993,7 @@ textarea{min-height:160px;resize:vertical} option{color:#111}
 
 .new-about h2 {
   margin: 8px 0 12px;
+  color: #ffffff;
   font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(48px, 5vw, 78px);
   line-height: .95;
@@ -989,6 +1014,7 @@ textarea{min-height:160px;resize:vertical} option{color:#111}
 
 .new-about-copy p {
   font-size: 15px;
+  color: #ffffff;
   line-height: 1.5;
   margin: 0 0 20px;
 }
@@ -1018,6 +1044,7 @@ textarea{min-height:160px;resize:vertical} option{color:#111}
 
   .new-platform-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
 
   .new-card-wide {
@@ -1094,4 +1121,8 @@ textarea{min-height:160px;resize:vertical} option{color:#111}
   .new-about h2 {
     font-size: 50px;
   }
+}
+
+.new-card.nerd .new-card-logo {
+  transform: translateX(-25px);
 }
