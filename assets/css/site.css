@@ -471,9 +471,9 @@ textarea{min-height:160px;resize:vertical} option{color:#111}
 }
 
 .new-platform-card.lenneration .new-card-logo img {
-    width: 95%;
-    max-width: 650px;
-    transform: translateY(-25px);
+  width: 72%;
+  max-width: 420px;
+  transform: translateY(-45px);
 }
 
 
