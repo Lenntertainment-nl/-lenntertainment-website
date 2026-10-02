@@ -952,12 +952,10 @@ font-size: clamp(52px, 5vw, 82px);
 }
 
 .new-card.horeca .new-arrow {
-  color: #8D3D0C;
+  color: #c58b3c;
   border-color: #c58b3c;
 }
-.new-card.horeca .new-arrow {
-    display: none;
-}
+
 
 .new-card.lenneration {
   background:
@@ -1126,80 +1124,35 @@ font-size: clamp(52px, 5vw, 82px);
 .new-card.nerd .new-card-logo {
   transform: translateX(-25px);
 }
-/* Onderste 4 cards - arrows gelijk uitlijnen */
+/* ===== ONDERSTE 4 CARDS - DEFINITIEVE CORRECTIES ===== */
+
+/* Cards 5 t/m 8 als referentie */
 .bottom-card {
-  position: relative;
+  position: relative !important;
 }
 
-.new-platform-grid .bottom-card .new-arrow {
-  position: absolute !important;
-  right: 10px !important;
-  bottom: 28px !important;
-  top: auto !important;
-  left: auto !important;
-  margin: 0 !important;
-  transform: none !important;
-  width: 42px;
-  height: 42px;
-  border: 1px solid #d6ad63;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #d6ad63;
-  font-size: 22px;
-  line-height: 1;
-}
-.starter .new-arrow {
-bottom: 6px !important;
-  top: auto !important;
-}
-/* ===== FINAL FIX ONDERSTE 4 CARDS ===== */
-
-/* Tekstblokken onderste rij iets omhoog */
-.bottom-card .new-card-copy {
-  transform: translateY(-22px) !important;
-}
-
-/* HorecaMattie tekst volledig wit */
+/* Tekst HorecaMattie iets lager */
 .horeca .new-card-copy,
 .horeca .new-card-copy small,
 .horeca .new-card-copy h2,
 .horeca .new-card-copy p {
-  color: #ffffff !important;
-  opacity: 1 !important;
+  transform: translateY(-15px) !important;
+  color: #fff !important;
 }
 
-/* Alle pijlen onderste vier cards exact dezelfde hoogte */
-.bottom-card .new-arrow {
-  position: absolute !important;
-  right: 22px !important;
-  bottom: 28px !important;
-  top: auto !important;
-  left: auto !important;
-  transform: none !important;
-  margin: 0 !important;
-}
-/* CARD 8 - definitieve pijlpositie */
-.bottom-card.starter .new-arrow {
-  position: absolute !important;
-  right: 22px !important;
-  bottom: -30px !important;
-  top: auto !important;
-  left: auto !important;
-  transform: none !important;
-  margin: 0 !important;
-}
-.your-project .bottom-card-logo,
-.starter .bottom-card-logo {
-  display: none !important;
-}
-/* Card 6 + 8 tekst gelijk met card 5 */
+/* Tekst card 6 en 8 op dezelfde hoogte */
 .your-project .new-card-copy,
 .starter .new-card-copy {
   transform: translateY(112px) !important;
 }
-/* CARD 7 - achtergrond rustiger + logo lager */
+
+/* Logo's boven tekst in card 6 en 8 weg */
+.your-project .bottom-card-logo,
+.starter .bottom-card-logo {
+  display: none !important;
+}
+
+/* Lenneration achtergrond blur */
 .lenneration::before {
   content: "";
   position: absolute;
@@ -1209,6 +1162,35 @@ bottom: 6px !important;
   pointer-events: none;
 }
 
+/* Lenneration logo groter en lager */
 .lenneration .bottom-card-logo {
-  transform: translateY(70px) !important;
+  position: absolute !important;
+  width: 85% !important;
+  max-width: none !important;
+  height: auto !important;
+  top: 65px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+}
+
+/* Lenneration tekst ruimte onder logo */
+.lenneration .new-card-copy {
+  top: 165px !important;
+}
+
+/* Alle pijlen onderaan op dezelfde hoogte */
+.bottom-card .new-arrow {
+  position: absolute !important;
+  right: 22px !important;
+  bottom: 22px !important;
+  top: auto !important;
+  left: auto !important;
+  transform: none !important;
+  margin: 0 !important;
+}
+
+/* Card 8 pijl verder naar rechts */
+.starter .new-arrow {
+  right: 22px !important;
+  bottom: -38px !important;
 }
