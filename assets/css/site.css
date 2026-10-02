@@ -1194,3 +1194,2424 @@ font-size: clamp(52px, 5vw, 82px);
   right: 22px !important;
   bottom: -38px !important;
 }
+/* ==================================================
+   ABOUT PAGE 2026
+   Eigen styling - homepage niet beïnvloeden
+   ================================================== */
+
+.about-new {
+  background: #080a0d;
+  color: #f4f0e8;
+}
+
+/* HERO */
+.about-new-hero {
+  min-height: 620px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 75% 35%, rgba(141,61,12,.22), transparent 32%),
+    radial-gradient(circle at 20% 20%, rgba(45,65,85,.28), transparent 35%),
+    linear-gradient(135deg, #111820 0%, #080a0d 55%, #15100d 100%);
+  border-bottom: 1px solid rgba(255,255,255,.10);
+}
+
+.about-new-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(0,0,0,.18) 1px, transparent 1px),
+    linear-gradient(rgba(0,0,0,.12) 1px, transparent 1px);
+  background-size: 70px 70px;
+  opacity: .18;
+  pointer-events: none;
+}
+
+.about-new-hero-shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,.72), transparent 70%);
+}
+
+.about-new-hero-inner {
+  position: relative;
+  z-index: 2;
+  padding-top: 150px;
+  padding-bottom: 80px;
+}
+
+.about-new-kicker,
+.about-new small {
+  display: block;
+  color: #b87333;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+}
+
+.about-new-hero h1 {
+  margin: 12px 0 20px;
+  max-width: 900px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(72px, 11vw, 150px);
+  line-height: .78;
+  letter-spacing: -.065em;
+  color: #fff;
+}
+
+.about-new-line,
+.about-new-gold-line {
+  display: block;
+  width: 72px;
+  height: 2px;
+  background: #b87333;
+}
+
+.about-new-hero p {
+  max-width: 680px;
+  margin: 28px 0 0;
+  color: rgba(255,255,255,.74);
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+
+/* BIO INTRO */
+.about-new-intro {
+  padding: 120px 0;
+  background: #0d1014;
+}
+
+.about-new-intro-grid,
+.about-new-ending-grid {
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  gap: 100px;
+  align-items: start;
+}
+
+.about-new-intro-title h2,
+.about-new-ending h2,
+.about-new-section-head h2 {
+  margin: 12px 0 28px;
+  font-family: Georgia, "Times New Roman", serif;
+  color: #fff;
+  letter-spacing: -.045em;
+}
+
+.about-new-intro-title h2 {
+  font-size: clamp(46px, 6vw, 78px);
+  line-height: .96;
+}
+
+.about-new-intro-copy {
+  border-left: 1px solid rgba(184,115,51,.55);
+  padding-left: 42px;
+}
+
+.about-new-intro-copy p {
+  margin: 0 0 24px;
+  color: rgba(255,255,255,.68);
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.about-new-intro-copy .about-new-lead {
+  color: #fff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 27px;
+  line-height: 1.45;
+}
+
+
+/* WERELDEN */
+.about-new-worlds {
+  padding: 120px 0;
+  background: #090b0e;
+  border-top: 1px solid rgba(255,255,255,.08);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.about-new-section-head {
+  margin-bottom: 60px;
+}
+
+.about-new-section-head h2 {
+  font-size: clamp(48px, 6vw, 80px);
+  line-height: 1;
+}
+
+.about-new-world-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 16px;
+}
+
+.about-new-world {
+  position: relative;
+  min-height: 430px;
+  padding: 46px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.10);
+  background:
+    radial-gradient(circle at 100% 0%, rgba(184,115,51,.15), transparent 38%),
+    linear-gradient(145deg, #151a20, #0d0f12);
+}
+
+.about-new-world::after {
+  content: "";
+  position: absolute;
+  inset: auto -60px -90px auto;
+  width: 230px;
+  height: 230px;
+  border: 1px solid rgba(184,115,51,.18);
+  border-radius: 50%;
+}
+
+.about-new-world > * {
+  position: relative;
+  z-index: 2;
+}
+
+.about-new-world span {
+  color: #b87333;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .18em;
+}
+
+.about-new-world h3 {
+  margin: 70px 0 24px;
+  font-family: Georgia, "Times New Roman", serif;
+  color: #fff;
+  font-size: clamp(34px, 4vw, 54px);
+  line-height: .98;
+  letter-spacing: -.04em;
+}
+
+.about-new-world p {
+  max-width: 570px;
+  color: rgba(255,255,255,.66);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+
+/* SUBTIELE VARIATIE PER WERELD */
+.about-world-music {
+  background:
+    radial-gradient(circle at 80% 25%, rgba(91,57,145,.22), transparent 36%),
+    linear-gradient(145deg,#15141c,#0b0d10);
+}
+
+.about-world-create {
+  background:
+    radial-gradient(circle at 85% 20%, rgba(184,115,51,.18), transparent 36%),
+    linear-gradient(145deg,#17130f,#0c0e10);
+}
+
+.about-world-hospitality {
+  background:
+    radial-gradient(circle at 80% 20%, rgba(104,75,38,.25), transparent 38%),
+    linear-gradient(145deg,#15130f,#0c0e10);
+}
+
+.about-world-business {
+  background:
+    radial-gradient(circle at 80% 20%, rgba(42,83,110,.24), transparent 38%),
+    linear-gradient(145deg,#111820,#0b0d10);
+}
+
+
+/* AFSLUITING */
+.about-new-ending {
+  padding: 130px 0 150px;
+  background:
+    radial-gradient(circle at 15% 80%, rgba(184,115,51,.14), transparent 32%),
+    #0d1014;
+}
+
+.about-new-ending h2 {
+  font-size: clamp(52px, 7vw, 88px);
+  line-height: .9;
+}
+
+.about-new-ending-copy {
+  padding-top: 32px;
+}
+
+.about-new-ending-copy p {
+  max-width: 650px;
+  color: rgba(255,255,255,.7);
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+.about-new-ending-copy blockquote {
+  margin: 55px 0 0;
+  padding: 35px 0 35px 35px;
+  border-left: 3px solid #b87333;
+  color: #fff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(30px, 4vw, 48px);
+  font-style: italic;
+  line-height: 1.18;
+}
+
+
+/* MOBILE */
+@media (max-width: 800px) {
+
+  .about-new-hero {
+    min-height: 560px;
+  }
+
+  .about-new-hero-inner {
+    padding-bottom: 55px;
+  }
+
+  .about-new-hero h1 {
+    font-size: clamp(64px, 20vw, 96px);
+  }
+
+  .about-new-intro,
+  .about-new-worlds,
+  .about-new-ending {
+    padding: 80px 0;
+  }
+
+  .about-new-intro-grid,
+  .about-new-ending-grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .about-new-intro-copy {
+    padding-left: 24px;
+  }
+
+  .about-new-world-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-new-world {
+    min-height: 380px;
+    padding: 32px;
+  }
+
+  .about-new-world h3 {
+    margin-top: 55px;
+  }
+}
+
+/* ABOUT - TYPOGRAFIE COMPACTER */
+
+.about-new-hero h1 {
+  font-size: clamp(54px, 7vw, 96px) !important;
+  line-height: .88 !important;
+}
+
+.about-new-intro-title h2 {
+  font-size: clamp(38px, 4.2vw, 58px) !important;
+  line-height: 1 !important;
+}
+
+.about-new-section-head h2 {
+  font-size: clamp(38px, 4.5vw, 60px) !important;
+}
+
+.about-new-world h3 {
+  font-size: clamp(28px, 3vw, 40px) !important;
+  line-height: 1.02 !important;
+}
+
+.about-new-ending h2 {
+  font-size: clamp(40px, 5vw, 64px) !important;
+  line-height: .96 !important;
+}
+
+.about-new-ending-copy blockquote {
+  font-size: clamp(26px, 3vw, 38px) !important;
+}
+
+.about-new-intro-copy .about-new-lead {
+  font-size: 22px !important;
+}
+
+/* ==================================================
+   MISSIE PAGE 2026
+   Zelfstandige styling - homepage blijft onaangetast
+   ================================================== */
+
+.mission-new {
+  background: #080a0d;
+  color: #f4f0e8;
+}
+
+
+/* HERO */
+.mission-new-hero {
+  position: relative;
+  min-height: 580px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+
+  background:
+    radial-gradient(circle at 78% 30%, rgba(141,61,12,.20), transparent 32%),
+    radial-gradient(circle at 18% 25%, rgba(45,65,85,.25), transparent 35%),
+    linear-gradient(135deg, #111820 0%, #080a0d 58%, #15100d 100%);
+
+  border-bottom: 1px solid rgba(255,255,255,.09);
+}
+
+.mission-new-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(90deg, rgba(255,255,255,.018) 1px, transparent 1px),
+    linear-gradient(rgba(255,255,255,.018) 1px, transparent 1px);
+
+  background-size: 70px 70px;
+  pointer-events: none;
+}
+
+.mission-new-hero-inner {
+  position: relative;
+  z-index: 2;
+  padding-top: 145px;
+  padding-bottom: 70px;
+}
+
+.mission-new small {
+  display: block;
+  color: #b87333;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+}
+
+.mission-new-hero h1 {
+  margin: 12px 0 24px;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(54px, 7vw, 92px);
+  line-height: .88;
+  letter-spacing: -.055em;
+
+  color: #fff;
+}
+
+.mission-new-line {
+  display: block;
+  width: 72px;
+  height: 2px;
+  background: #b87333;
+}
+
+.mission-new-hero p {
+  max-width: 650px;
+  margin: 26px 0 0;
+
+  color: rgba(255,255,255,.72);
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+
+/* INTRO */
+.mission-new-intro {
+  padding: 100px 0;
+  background: #0d1014;
+}
+
+.mission-new-intro-grid {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 90px;
+  align-items: start;
+}
+
+.mission-new-intro h2 {
+  margin: 12px 0 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(38px, 4.2vw, 56px);
+  line-height: 1;
+  letter-spacing: -.04em;
+
+  color: #fff;
+}
+
+.mission-new-intro-copy {
+  padding-left: 38px;
+  border-left: 1px solid rgba(184,115,51,.55);
+}
+
+.mission-new-intro-copy p {
+  margin: 0 0 22px;
+
+  color: rgba(255,255,255,.68);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.mission-new-intro-copy .mission-new-lead {
+  color: #fff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 21px;
+  line-height: 1.5;
+}
+
+
+/* DRIE PRINCIPES */
+.mission-new-principles {
+  padding: 100px 0 110px;
+  background: #090b0e;
+
+  border-top: 1px solid rgba(255,255,255,.08);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.mission-new-heading {
+  margin-bottom: 45px;
+}
+
+.mission-new-heading h2 {
+  margin: 10px 0 0;
+
+  color: #fff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(38px, 4.5vw, 58px);
+  line-height: 1;
+  letter-spacing: -.04em;
+}
+
+.mission-new-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 16px;
+}
+
+.mission-new-card {
+  position: relative;
+  min-height: 350px;
+  padding: 38px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(255,255,255,.10);
+
+  background:
+    radial-gradient(circle at 100% 0%, rgba(184,115,51,.14), transparent 38%),
+    linear-gradient(145deg,#151a20,#0d0f12);
+}
+
+.mission-new-card::after {
+  content: "";
+  position: absolute;
+  right: -75px;
+  bottom: -95px;
+
+  width: 210px;
+  height: 210px;
+
+  border: 1px solid rgba(184,115,51,.16);
+  border-radius: 50%;
+}
+
+.mission-new-card > * {
+  position: relative;
+  z-index: 2;
+}
+
+.mission-new-card > span {
+  color: #b87333;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .18em;
+}
+
+.mission-new-card h3 {
+  margin: 65px 0 20px;
+
+  color: #fff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(27px, 2.6vw, 36px);
+  line-height: 1.05;
+  letter-spacing: -.035em;
+}
+
+.mission-new-card p {
+  margin: 0;
+
+  color: rgba(255,255,255,.66);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+
+/* SLOT */
+.mission-new-ending {
+  padding: 110px 0 125px;
+
+  background:
+    radial-gradient(circle at 80% 70%, rgba(141,61,12,.14), transparent 30%),
+    #0d1014;
+}
+
+.mission-new-ending-inner {
+  max-width: 900px;
+}
+
+.mission-new-ending h2 {
+  margin: 12px 0 28px;
+
+  color: #fff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(40px, 5vw, 62px);
+  line-height: .98;
+  letter-spacing: -.045em;
+}
+
+.mission-new-ending p {
+  max-width: 680px;
+
+  color: rgba(255,255,255,.68);
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+
+/* MOBIEL */
+@media (max-width: 800px) {
+
+  .mission-new-hero {
+    min-height: 520px;
+  }
+
+  .mission-new-hero-inner {
+    padding-top: 125px;
+    padding-bottom: 50px;
+  }
+
+  .mission-new-hero h1 {
+    font-size: clamp(50px, 16vw, 70px);
+  }
+
+  .mission-new-intro,
+  .mission-new-principles,
+  .mission-new-ending {
+    padding: 70px 0;
+  }
+
+  .mission-new-intro-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .mission-new-intro-copy {
+    padding-left: 22px;
+  }
+
+  .mission-new-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mission-new-card {
+    min-height: 300px;
+    padding: 30px;
+  }
+
+  .mission-new-card h3 {
+    margin-top: 48px;
+  }
+
+  .mission-new-ending h2 {
+    font-size: clamp(36px, 11vw, 48px);
+  }
+}
+
+/* ==================================================
+   ABOUT - DEFINITIEF COMPACT DESKTOP
+   ================================================== */
+
+@media (min-width: 801px) {
+
+  .about-new-hero {
+    min-height: 250px !important;
+  }
+
+  .about-new-hero-inner {
+    padding-top: 80px !important;
+    padding-bottom: 30px !important;
+  }
+
+  .about-new-hero h1 {
+    margin: 7px 0 12px !important;
+    font-size: 46px !important;
+    line-height: .9 !important;
+  }
+
+  .about-new-line {
+    width: 45px !important;
+  }
+
+  .about-new-hero p {
+    max-width: 620px !important;
+    margin-top: 13px !important;
+    font-size: 14px !important;
+    line-height: 1.45 !important;
+  }
+
+
+  /* BIO */
+  .about-new-intro {
+    padding: 32px 0 !important;
+  }
+
+  .about-new-intro-grid {
+    grid-template-columns: .8fr 1.2fr !important;
+    gap: 45px !important;
+  }
+
+  .about-new-intro-title h2 {
+    margin: 7px 0 14px !important;
+    font-size: 31px !important;
+    line-height: .98 !important;
+  }
+
+  .about-new-intro-copy {
+    padding-left: 25px !important;
+  }
+
+  .about-new-intro-copy .about-new-lead {
+    font-size: 16px !important;
+    line-height: 1.4 !important;
+  }
+
+  .about-new-intro-copy p {
+    margin-bottom: 9px !important;
+    font-size: 13px !important;
+    line-height: 1.45 !important;
+  }
+
+
+  /* VIER WERELDEN */
+  .about-new-worlds {
+    padding: 32px 0 !important;
+  }
+
+  .about-new-section-head {
+    margin-bottom: 18px !important;
+  }
+
+  .about-new-section-head h2 {
+    margin: 5px 0 0 !important;
+    font-size: 30px !important;
+  }
+
+  .about-new-world-grid {
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 10px !important;
+  }
+
+  .about-new-world {
+    min-height: 215px !important;
+    padding: 20px !important;
+  }
+
+  .about-new-world h3 {
+    margin: 25px 0 10px !important;
+    font-size: 21px !important;
+    line-height: 1 !important;
+  }
+
+  .about-new-world p {
+    margin: 0 0 8px !important;
+    font-size: 12px !important;
+    line-height: 1.4 !important;
+  }
+
+
+  /* AFSLUITING */
+  .about-new-ending {
+    padding: 32px 0 !important;
+  }
+
+  .about-new-ending-grid {
+    grid-template-columns: .8fr 1.2fr !important;
+    gap: 45px !important;
+  }
+
+  .about-new-ending h2 {
+    margin: 7px 0 0 !important;
+    font-size: 31px !important;
+    line-height: .98 !important;
+  }
+
+  .about-new-ending-copy {
+    padding-top: 0 !important;
+  }
+
+  .about-new-ending-copy p {
+    margin: 0 0 8px !important;
+    font-size: 13px !important;
+    line-height: 1.45 !important;
+  }
+
+  .about-new-ending-copy blockquote {
+    margin: 15px 0 0 !important;
+    padding: 10px 0 10px 18px !important;
+    font-size: 21px !important;
+    line-height: 1.15 !important;
+  }
+}
+
+/* ABOUT - KOPERBRUINE FADE RECHTERZIJDE */
+.about-new {
+  position: relative;
+  background:
+    linear-gradient(
+      90deg,
+      #080a0d 0%,
+      #080a0d 48%,
+      #120d0a 70%,
+      #241208 86%,
+      #3a190b 100%
+    ) !important;
+}
+
+/* Secties transparant zodat de fade over de hele pagina doorloopt */
+.about-new-hero,
+.about-new-intro,
+.about-new-worlds,
+.about-new-ending {
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+/* ==================================================
+   ABOUT - LEN NTERTAINMENT WATERMARK
+   ================================================== */
+
+.about-new-hero {
+  position: relative !important;
+  isolation: isolate;
+}
+
+.about-new-hero::before {
+  content: "";
+  position: absolute;
+
+  width: 360px;
+  height: 360px;
+
+  right: 7%;
+  top: 57%;
+  transform: translateY(-50%);
+
+  background-image: url("../images/lenntertainment-logo-white.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  opacity: .075;
+  filter: blur(.2px);
+
+  pointer-events: none;
+  z-index: 1;
+}
+
+.about-new-hero-inner {
+  position: relative;
+  z-index: 2;
+}
+
+/* Op mobiel kleiner en subtieler */
+@media (max-width: 800px) {
+  .about-new-hero::before {
+    width: 230px;
+    height: 230px;
+    right: -35px;
+    opacity: .055;
+  }
+}
+
+/* ==================================================
+   MISSIE - COMPACT + ZELFDE LOOK ALS ABOUT
+   ================================================== */
+
+.mission-new {
+  position: relative;
+  background:
+    linear-gradient(
+      90deg,
+      #080a0d 0%,
+      #080a0d 48%,
+      #120d0a 70%,
+      #241208 86%,
+      #3a190b 100%
+    ) !important;
+}
+
+/* Achtergronden van losse secties transparant */
+.mission-new-hero,
+.mission-new-intro,
+.mission-new-principles,
+.mission-new-ending {
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+@media (min-width: 801px) {
+
+  /* HERO */
+  .mission-new-hero {
+    min-height: 250px !important;
+  }
+
+  .mission-new-hero-inner {
+    padding-top: 80px !important;
+    padding-bottom: 30px !important;
+  }
+
+  .mission-new-hero h1 {
+    margin: 7px 0 12px !important;
+    font-size: 46px !important;
+    line-height: .9 !important;
+  }
+
+  .mission-new-hero p {
+    max-width: 620px !important;
+    margin-top: 13px !important;
+    font-size: 14px !important;
+    line-height: 1.45 !important;
+  }
+
+  /* INTRO */
+  .mission-new-intro {
+    padding: 32px 0 !important;
+  }
+
+  .mission-new-intro-grid {
+    gap: 45px !important;
+  }
+
+  .mission-new-intro h2 {
+    font-size: 31px !important;
+    line-height: .98 !important;
+  }
+
+  .mission-new-intro-copy .mission-new-lead {
+    font-size: 16px !important;
+    line-height: 1.4 !important;
+  }
+
+  .mission-new-intro-copy p {
+    font-size: 13px !important;
+    line-height: 1.45 !important;
+  }
+
+  /* PRINCIPES */
+  .mission-new-principles {
+    padding: 32px 0 !important;
+  }
+
+  .mission-new-heading {
+    margin-bottom: 18px !important;
+  }
+
+  .mission-new-heading h2 {
+    font-size: 30px !important;
+  }
+
+  .mission-new-card {
+    min-height: 215px !important;
+    padding: 20px !important;
+  }
+
+  .mission-new-card h3 {
+    margin: 25px 0 10px !important;
+    font-size: 21px !important;
+    line-height: 1 !important;
+  }
+
+  .mission-new-card p {
+    font-size: 12px !important;
+    line-height: 1.4 !important;
+  }
+
+  /* AFSLUITING */
+  .mission-new-ending {
+    padding: 32px 0 !important;
+  }
+
+  .mission-new-ending h2 {
+    font-size: 31px !important;
+    line-height: .98 !important;
+  }
+
+  .mission-new-ending p {
+    font-size: 13px !important;
+    line-height: 1.45 !important;
+  }
+}
+
+/* ==================================================
+   LENNTERTAINMENT RECORDS
+   ================================================== */
+
+.records-new {
+  position: relative;
+  overflow: hidden;
+  color: #f4f0e8;
+
+  background:
+    linear-gradient(
+      90deg,
+      #080a0d 0%,
+      #080a0d 46%,
+      #120d0a 70%,
+      #241208 86%,
+      #3a190b 100%
+    );
+}
+
+
+/* ==========================================
+   TURNTABLE BACKGROUND
+   ========================================== */
+
+.records-turntable {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.records-deck {
+  position: absolute;
+
+  width: 760px;
+  height: 760px;
+
+  right: -110px;
+  top: 180px;
+
+  border: 1px solid rgba(255,255,255,.07);
+  border-radius: 32px;
+
+  background:
+    radial-gradient(
+      circle at 45% 45%,
+      rgba(255,255,255,.06),
+      transparent 42%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,.025),
+      rgba(0,0,0,.25)
+    );
+
+  transform: rotate(-5deg);
+  opacity: .62;
+}
+
+
+/* PLATTER */
+
+.records-platter {
+  position: absolute;
+
+  width: 590px;
+  height: 590px;
+
+  left: 35px;
+  top: 75px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      #16181b 0%,
+      #090a0c 67%,
+      #202226 68%,
+      #090a0c 72%
+    );
+
+  box-shadow:
+    0 30px 80px rgba(0,0,0,.65),
+    0 0 0 8px rgba(255,255,255,.025);
+}
+
+
+/* VINYL */
+
+.records-vinyl {
+  position: absolute;
+
+  width: 540px;
+  height: 540px;
+
+  left: 25px;
+  top: 25px;
+
+  border-radius: 50%;
+
+  background:
+    repeating-radial-gradient(
+      circle,
+      #08090a 0px,
+      #08090a 3px,
+      #17191c 4px,
+      #090a0b 6px
+    );
+
+  box-shadow:
+    inset 0 0 55px rgba(255,255,255,.04),
+    0 0 45px rgba(0,0,0,.8);
+
+  animation: lenn-record-spin 14s linear infinite;
+}
+
+
+/* GLANS OVER VINYL */
+
+.records-vinyl::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  border-radius: 50%;
+
+  background:
+    conic-gradient(
+      from 20deg,
+      transparent 0deg,
+      rgba(255,255,255,.09) 28deg,
+      transparent 65deg,
+      transparent 185deg,
+      rgba(255,255,255,.055) 220deg,
+      transparent 260deg
+    );
+}
+
+
+/* MIDDENLABEL */
+
+.records-vinyl-label {
+  position: absolute;
+
+  width: 170px;
+  height: 170px;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  color: #f6efe4;
+
+  background:
+    radial-gradient(
+      circle,
+      #c77937 0%,
+      #9a4b18 45%,
+      #52230c 100%
+    );
+
+  box-shadow:
+    0 0 35px rgba(141,61,12,.35);
+}
+
+.records-vinyl-label::after {
+  content: "";
+
+  position: absolute;
+
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: #090a0b;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%,-50%);
+}
+
+.records-label-l {
+  font-family: Georgia, serif;
+  font-size: 58px;
+  line-height: .8;
+  font-weight: 700;
+}
+
+.records-label-name {
+  margin-top: 13px;
+
+  font-size: 8px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.records-label-records {
+  margin-top: 3px;
+
+  font-size: 6px;
+  letter-spacing: 3px;
+}
+
+
+/* GROOVES EXTRA */
+
+.records-vinyl-grooves {
+  position: absolute;
+  inset: 55px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(255,255,255,.035);
+
+  box-shadow:
+    0 0 0 18px rgba(255,255,255,.01),
+    0 0 0 36px rgba(255,255,255,.012),
+    0 0 0 54px rgba(255,255,255,.01),
+    0 0 0 72px rgba(255,255,255,.012);
+}
+
+
+/* TONEARM */
+
+.records-tonearm {
+  position: absolute;
+
+  width: 170px;
+  height: 510px;
+
+  right: 18px;
+  top: 72px;
+
+  transform: rotate(8deg);
+}
+
+.records-tonearm-base {
+  position: absolute;
+
+  width: 105px;
+  height: 105px;
+
+  right: 5px;
+  top: 0;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      #44484c,
+      #181a1d 58%,
+      #08090a 60%
+    );
+
+  box-shadow: 0 15px 30px rgba(0,0,0,.6);
+}
+
+.records-tonearm-stick {
+  position: absolute;
+
+  width: 13px;
+  height: 390px;
+
+  right: 62px;
+  top: 70px;
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #383b3f,
+      #b5b6b5 48%,
+      #313337
+    );
+
+  transform-origin: top center;
+  transform: rotate(14deg);
+}
+
+.records-tonearm-head {
+  position: absolute;
+
+  width: 55px;
+  height: 28px;
+
+  right: 126px;
+  bottom: 15px;
+
+  background: #17191c;
+
+  border: 1px solid rgba(255,255,255,.18);
+
+  transform: rotate(24deg);
+}
+
+
+/* DRAAIEN */
+
+@keyframes lenn-record-spin {
+
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+
+
+/* ==========================================
+   CONTENT BOVEN DE DRAAITAFEL
+   ========================================== */
+
+.records-new section {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* HERO */
+
+.records-new-hero {
+  min-height: 250px;
+}
+
+.records-new-hero-inner {
+  padding-top: 80px;
+  padding-bottom: 30px;
+}
+
+.records-new-hero h1 {
+  margin: 7px 0 12px;
+
+  font-size: 46px;
+  line-height: .9;
+
+  letter-spacing: -2px;
+}
+
+.records-new-line {
+  width: 45px;
+  height: 2px;
+
+  background: #b86b32;
+
+  margin: 14px 0;
+}
+
+.records-new-hero p {
+  max-width: 570px;
+
+  margin-top: 13px;
+
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+
+/* STORY */
+
+.records-new-story {
+  padding: 32px 0;
+
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+
+.records-new-story-grid {
+  display: grid;
+
+  grid-template-columns: .8fr 1.2fr;
+
+  gap: 45px;
+}
+
+.records-new-story-title h2 {
+  margin: 7px 0 0;
+
+  font-size: 31px;
+  line-height: .98;
+}
+
+.records-new-story-copy {
+  max-width: 620px;
+
+  padding-left: 25px;
+}
+
+.records-new-story-copy .records-new-lead {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.records-new-story-copy p {
+  margin: 0 0 9px;
+
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+
+/* PRINCIPLES */
+
+.records-new-principles {
+  padding: 32px 0;
+
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+
+.records-new-section-head {
+  margin-bottom: 18px;
+}
+
+.records-new-section-head h2 {
+  margin: 5px 0 0;
+
+  font-size: 30px;
+}
+
+.records-new-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3,1fr);
+
+  gap: 10px;
+}
+
+.records-new-card {
+  min-height: 215px;
+
+  padding: 20px;
+
+  border: 1px solid rgba(255,255,255,.18);
+
+  background: rgba(8,10,13,.58);
+
+  backdrop-filter: blur(3px);
+}
+
+.records-new-card span {
+  color: #d48a48;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+}
+
+.records-new-card h3 {
+  margin: 25px 0 10px;
+
+  font-size: 21px;
+  line-height: 1;
+}
+
+.records-new-card p {
+  max-width: 320px;
+
+  margin: 0;
+
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+
+/* ENDING */
+
+.records-new-ending {
+  padding: 32px 0;
+
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+
+.records-new-ending-grid {
+  display: grid;
+
+  grid-template-columns: .8fr 1.2fr;
+
+  gap: 45px;
+}
+
+.records-new-ending h2 {
+  margin: 7px 0 0;
+
+  font-size: 31px;
+  line-height: .98;
+}
+
+.records-new-ending-copy {
+  max-width: 620px;
+
+  padding-left: 25px;
+}
+
+.records-new-ending-copy p {
+  margin: 0 0 8px;
+
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.records-new-contact {
+  display: inline-block;
+
+  margin-top: 12px;
+
+  padding-bottom: 5px;
+
+  color: #d48a48;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+
+  text-decoration: none;
+
+  border-bottom: 1px solid #d48a48;
+}
+
+
+/* ==========================================
+   MOBILE
+   ========================================== */
+
+@media (max-width: 800px) {
+
+  .records-deck {
+    width: 540px;
+    height: 540px;
+
+    right: -310px;
+    top: 210px;
+
+    opacity: .42;
+  }
+
+  .records-platter {
+    width: 430px;
+    height: 430px;
+
+    left: 20px;
+    top: 45px;
+  }
+
+  .records-vinyl {
+    width: 390px;
+    height: 390px;
+
+    left: 20px;
+    top: 20px;
+  }
+
+  .records-vinyl-label {
+    width: 125px;
+    height: 125px;
+  }
+
+  .records-label-l {
+    font-size: 42px;
+  }
+
+  .records-tonearm {
+    display: none;
+  }
+
+
+  .records-new-hero {
+    min-height: 330px;
+  }
+
+  .records-new-hero-inner {
+    padding-top: 95px;
+    padding-bottom: 40px;
+  }
+
+  .records-new-hero h1 {
+    font-size: 48px;
+  }
+
+  .records-new-story,
+  .records-new-principles,
+  .records-new-ending {
+    padding: 42px 0;
+  }
+
+  .records-new-story-grid,
+  .records-new-ending-grid {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+  }
+
+  .records-new-story-copy,
+  .records-new-ending-copy {
+    padding-left: 0;
+  }
+
+  .records-new-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .records-new-card {
+    min-height: 0;
+  }
+
+}/* ==================================================
+   LENNTERTAINMENT RECORDS — GHETTOBLASTER
+   ================================================== */
+
+.label-page {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+
+  color: #f4f0e8;
+  background: #080a0d;
+}
+
+
+/* ==================================================
+   GHETTOBLASTER ACHTERGROND
+   ================================================== */
+
+.label-boombox {
+  position: absolute;
+  inset: 0;
+
+  z-index: 0;
+
+  background-image: url("../images/records-ghettoblaster-new.png");
+
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+
+  opacity: .88;
+
+  pointer-events: none;
+}
+
+
+/* Donkere/copper film over achtergrond */
+
+.label-overlay {
+  position: absolute;
+  inset: 0;
+
+  z-index: 1;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5,7,9,.94) 0%,
+      rgba(5,7,9,.78) 30%,
+      rgba(10,8,6,.32) 58%,
+      rgba(55,25,8,.20) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,.18) 0%,
+      rgba(0,0,0,.10) 45%,
+      rgba(0,0,0,.72) 100%
+    );
+}
+
+
+/* ==================================================
+   CASSETTE
+   ================================================== */
+
+.label-cassette {
+  position: absolute;
+
+  z-index: 2;
+
+  width: 350px;
+
+  top: 250px;
+  right: 18%;
+
+  pointer-events: none;
+
+  filter:
+    drop-shadow(0 15px 30px rgba(0,0,0,.65))
+    drop-shadow(0 0 22px rgba(199,105,32,.12));
+}
+
+
+.label-cassette-img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+}
+
+
+/* ==================================================
+   VERLICHTE SPOELEN
+   ================================================== */
+
+.cassette-reel {
+  position: absolute;
+
+  width: 64px;
+  height: 64px;
+
+  top: 45.5%;
+
+  margin-top: -32px;
+
+  border-radius: 50%;
+
+  z-index: 3;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255,190,85,.10) 0%,
+      rgba(255,149,38,.20) 44%,
+      rgba(255,115,18,.65) 61%,
+      rgba(255,151,46,.25) 72%,
+      transparent 76%
+    );
+
+  box-shadow:
+    0 0 8px rgba(255,133,26,.8),
+    0 0 20px rgba(255,115,15,.7),
+    0 0 38px rgba(216,83,7,.45);
+
+  animation:
+    cassette-glow 2.4s ease-in-out infinite alternate;
+}
+
+
+.cassette-reel-left {
+  left: 27.5%;
+}
+
+
+.cassette-reel-right {
+  right: 27.5%;
+}
+
+
+/* draaiend binnenwerk */
+
+.cassette-reel-inner {
+  position: absolute;
+
+  inset: 8px;
+
+  border-radius: 50%;
+
+  border: 5px dashed rgba(255,222,157,.90);
+
+  box-shadow:
+    inset 0 0 10px rgba(255,150,30,.8),
+    0 0 9px rgba(255,143,23,.7);
+
+  animation:
+    cassette-spin 2.3s linear infinite;
+}
+
+
+/* klein middelpunt */
+
+.cassette-reel-inner::after {
+  content: "";
+
+  position: absolute;
+
+  width: 12px;
+  height: 12px;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%,-50%);
+
+  border-radius: 50%;
+
+  background: #080808;
+
+  border: 2px solid rgba(255,193,99,.8);
+}
+
+
+/* beide draaien dezelfde kant op */
+
+@keyframes cassette-spin {
+
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+
+
+/* verlichting leeft heel subtiel */
+
+@keyframes cassette-glow {
+
+  from {
+    opacity: .78;
+
+    filter:
+      brightness(.92);
+  }
+
+  to {
+    opacity: 1;
+
+    filter:
+      brightness(1.18);
+  }
+
+}
+
+
+/* ==================================================
+   ALLE CONTENT BOVEN ACHTERGROND
+   ================================================== */
+
+.label-page section {
+  position: relative;
+
+  z-index: 4;
+}
+
+
+/* ==================================================
+   HERO
+   ================================================== */
+
+.label-hero {
+  min-height: 420px;
+}
+
+
+.label-hero-inner {
+  padding-top: 80px;
+  padding-bottom: 55px;
+}
+
+
+.label-hero h1 {
+  margin: 7px 0 12px;
+
+  font-size: 68px;
+  line-height: .82;
+
+  letter-spacing: -3px;
+}
+
+
+.label-orange-line {
+  width: 55px;
+  height: 3px;
+
+  margin: 20px 0;
+
+  background: #d47726;
+}
+
+
+.label-hero p {
+  max-width: 500px;
+
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 1.5;
+
+  color: rgba(255,255,255,.92);
+}
+
+
+/* ==================================================
+   STORY
+   ================================================== */
+
+.label-story {
+  padding: 32px 0;
+
+  border-top:
+    1px solid rgba(255,255,255,.10);
+
+  background:
+    rgba(5,7,9,.28);
+}
+
+
+.label-story-grid {
+  display: grid;
+
+  grid-template-columns:
+    .8fr 1.2fr;
+
+  gap: 45px;
+}
+
+
+.label-story h2 {
+  margin: 7px 0 0;
+
+  font-size: 31px;
+  line-height: .98;
+}
+
+
+.label-story-copy {
+  max-width: 620px;
+
+  padding-left: 25px;
+}
+
+
+.label-story-copy p {
+  margin: 0 0 9px;
+
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+
+.label-story-copy .label-lead {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+
+/* ==================================================
+   PRINCIPES
+   ================================================== */
+
+.label-principles {
+  padding: 32px 0;
+}
+
+
+.label-section-head {
+  margin-bottom: 18px;
+}
+
+
+.label-section-head h2 {
+  margin: 5px 0 0;
+
+  font-size: 30px;
+}
+
+
+.label-card-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  gap: 10px;
+}
+
+
+.label-card {
+  min-height: 200px;
+
+  padding: 20px;
+
+  border:
+    1px solid rgba(255,255,255,.20);
+
+  background:
+    rgba(4,5,6,.68);
+
+  backdrop-filter:
+    blur(6px);
+
+  -webkit-backdrop-filter:
+    blur(6px);
+
+  box-shadow:
+    0 12px 30px rgba(0,0,0,.20);
+}
+
+
+.label-card span {
+  color: #e58a37;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+}
+
+
+.label-card h3 {
+  margin: 25px 0 10px;
+
+  font-size: 21px;
+  line-height: 1;
+}
+
+
+.label-card p {
+  margin: 0;
+
+  max-width: 320px;
+
+  font-size: 12px;
+  line-height: 1.4;
+
+  color:
+    rgba(255,255,255,.83);
+}
+
+
+/* ==================================================
+   CTA
+   ================================================== */
+
+.label-cta {
+  padding: 38px 0 42px;
+
+  border-top:
+    1px solid rgba(255,255,255,.10);
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(4,5,6,.92),
+      rgba(22,10,3,.76)
+    );
+}
+
+
+.label-cta-grid {
+  display: grid;
+
+  grid-template-columns:
+    .8fr 1.2fr;
+
+  gap: 45px;
+}
+
+
+.label-cta h2 {
+  margin: 7px 0 0;
+
+  font-size: 31px;
+  line-height: .98;
+}
+
+
+.label-cta-copy {
+  padding-left: 25px;
+
+  max-width: 620px;
+}
+
+
+.label-cta-copy p {
+  margin: 0 0 8px;
+
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+
+.label-contact {
+  display: inline-block;
+
+  margin-top: 13px;
+  padding-bottom: 5px;
+
+  color: #e58a37;
+
+  text-decoration: none;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+
+  border-bottom:
+    1px solid #e58a37;
+
+  transition:
+    opacity .2s ease,
+    transform .2s ease;
+}
+
+
+.label-contact:hover {
+  opacity: .78;
+
+  transform:
+    translateX(3px);
+}
+
+
+/* ==================================================
+   MOBILE
+   ================================================== */
+
+@media (max-width: 800px) {
+
+  .label-boombox {
+    background-position:
+      58% top;
+
+    opacity: .72;
+  }
+
+
+  .label-overlay {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(5,7,9,.65) 0%,
+        rgba(5,7,9,.82) 38%,
+        rgba(5,7,9,.96) 70%,
+        #080a0d 100%
+      );
+  }
+
+
+  .label-cassette {
+    width: 235px;
+
+    top: 330px;
+    right: -28px;
+
+    opacity: .85;
+  }
+
+
+  .cassette-reel {
+    width: 43px;
+    height: 43px;
+
+    margin-top: -21.5px;
+  }
+
+
+  .cassette-reel-inner {
+    inset: 6px;
+
+    border-width: 3px;
+  }
+
+
+  .label-hero {
+    min-height: 520px;
+  }
+
+
+  .label-hero-inner {
+    padding-top: 95px;
+    padding-bottom: 50px;
+  }
+
+
+  .label-hero h1 {
+    font-size: 54px;
+  }
+
+
+  .label-story,
+  .label-principles,
+  .label-cta {
+    padding: 42px 0;
+  }
+
+
+  .label-story-grid,
+  .label-cta-grid {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+  }
+
+
+  .label-story-copy,
+  .label-cta-copy {
+    padding-left: 0;
+  }
+
+
+  .label-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .label-card {
+    min-height: 0;
+  }
+
+}
+
+
+/* ==================================================
+   TOEGANKELIJKHEID:
+   ANIMATIE UIT BIJ REDUCED MOTION
+   ================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .cassette-reel,
+  .cassette-reel-inner {
+    animation: none !important;
+  }
+
+}
+
+/* RECORDS - CASSETTE EXACT IN DECK */
+@media (min-width: 801px) {
+
+  .label-cassette {
+    width: 470px !important;
+
+    top: 405px !important;
+    right: 29% !important;
+
+    transform: none !important;
+
+    z-index: 3 !important;
+  }
+
+}
+
+/* =========================================================
+   ZAKELIJK — COMPACT / ABOUT STYLE
+   ========================================================= */
+
+@media (min-width: 769px) {
+
+  /* Donker → warm koperbruin, zoals About */
+  body:has(.business-page),
+  .business-page {
+    background:
+      linear-gradient(
+        90deg,
+        #080a0d 0%,
+        #080a0d 48%,
+        #120d0a 70%,
+        #241208 86%,
+        #3a190b 100%
+      );
+  }
+
+  /* Hero */
+  .business-page .page-hero {
+    min-height: 250px;
+    padding: 62px 0 38px;
+    background: transparent;
+  }
+
+  .business-page .page-hero h1 {
+    font-size: 46px;
+    line-height: .90;
+    margin: 8px 0 14px;
+  }
+
+  .business-page .page-hero p {
+    max-width: 650px;
+    font-size: 13px;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* Zakelijke inhoud */
+  .business-page .content-section {
+    padding: 34px 0 48px;
+    background: transparent !important;
+    color: #fff;
+  }
+
+  .business-page .two-col {
+    grid-template-columns: .8fr 1.2fr;
+    gap: 60px;
+    align-items: start;
+  }
+
+  .business-page .section-title {
+    font-size: 32px;
+    line-height: 1.05;
+    margin: 8px 0 0;
+  }
+
+  .business-page .prose {
+    font-size: 13px;
+    line-height: 1.65;
+  }
+
+  .business-page .prose p {
+    margin: 0 0 12px;
+  }
+
+  .business-page .eyebrow {
+    font-size: 10px;
+    letter-spacing: .18em;
+  }
+
+  .business-page .content-section .eyebrow {
+    color: #c8793c !important;
+  }
+
+  .business-page .btn {
+    margin-top: 8px;
+    color: #fff !important;
+    border-color: rgba(255,255,255,.28);
+  }
+}
+
+/* =========================================================
+   CONTACT — COMPACT / ABOUT STYLE
+   ========================================================= */
+
+@media (min-width: 769px) {
+
+  .contact-page {
+    background:
+      linear-gradient(
+        90deg,
+        #080a0d 0%,
+        #080a0d 48%,
+        #120d0a 70%,
+        #241208 86%,
+        #3a190b 100%
+      );
+    color: #fff;
+  }
+
+  /* HERO */
+  .contact-page .page-hero {
+    min-height: 250px;
+    padding: 62px 0 38px;
+    background: transparent;
+  }
+
+  .contact-page .page-hero h1 {
+    font-size: 46px;
+    line-height: .90;
+    margin: 8px 0 14px;
+  }
+
+  .contact-page .page-hero p {
+    max-width: 650px;
+    font-size: 13px;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* CONTACTGEDEELTE */
+  .contact-page .content-section {
+    padding: 34px 0 48px;
+    background: transparent !important;
+    color: #fff;
+  }
+
+  .contact-page .contact-wrap {
+    grid-template-columns: .8fr 1.2fr;
+    gap: 60px;
+    align-items: start;
+  }
+
+  .contact-page .section-title {
+    font-size: 32px;
+    line-height: 1.05;
+    margin: 8px 0 14px;
+  }
+
+  .contact-page .content-section p {
+    font-size: 13px;
+    line-height: 1.65;
+  }
+
+  .contact-page .eyebrow {
+    font-size: 10px;
+    letter-spacing: .18em;
+  }
+
+  .contact-page .content-section .eyebrow {
+    color: #c8793c !important;
+  }
+
+  .contact-page .note {
+    font-size: 11px;
+    line-height: 1.5;
+    opacity: .65;
+  }
+
+  /* FORMULIER */
+  .contact-page #contact-form {
+    gap: 10px;
+  }
+
+  .contact-page #contact-form input,
+  .contact-page #contact-form select,
+  .contact-page #contact-form textarea {
+    background: rgba(0,0,0,.22);
+    border: 1px solid rgba(255,255,255,.16);
+    color: #fff;
+    font-size: 12px;
+    padding: 11px 13px;
+  }
+
+  .contact-page #contact-form textarea {
+    min-height: 100px;
+  }
+
+  .contact-page #contact-form input::placeholder,
+  .contact-page #contact-form textarea::placeholder {
+    color: rgba(255,255,255,.55);
+  }
+
+  .contact-page #contact-form select {
+    color: rgba(255,255,255,.8);
+  }
+
+  .contact-page .submit {
+    margin-top: 4px;
+  }
+}
