@@ -6018,3 +6018,55 @@ transform:translateY(:10px);
     line-height:1.06 !important;
   }
 }
+
+/* =========================================================
+   ABOUT — IPAD FINISHING TOUCHES
+   ========================================================= */
+
+@media (min-width:601px) and (max-width:900px){
+
+  /* 1. Bio compacter */
+  .about-story-manifest{
+    padding-top:32px !important;
+    padding-bottom:32px !important;
+  }
+
+  .about-story-copy{
+    padding-top:14px !important;
+  }
+
+
+  /* 2. 'Ruimte voor wat er nog niet is' vrij van sticky header */
+  .about-story-statement{
+    padding-top:95px !important;
+  }
+
+  .about-story-statement h2{
+    margin-top:0 !important;
+  }
+
+
+  /* 3. ASK LENN kleiner en rustiger op iPad */
+  .ai-chat-launcher{
+    width:auto !important;
+    min-width:150px !important;
+    height:58px !important;
+    padding:0 24px !important;
+
+    right:28px !important;
+    bottom:28px !important;
+
+    border-radius:30px !important;
+
+    font-size:11px !important;
+    letter-spacing:.16em !important;
+  }
+
+  /* Chatvenster zelf passend op iPad */
+  #ai-chat-panel{
+    right:28px !important;
+    bottom:98px !important;
+    width:360px !important;
+    max-width:calc(100vw - 56px) !important;
+  }
+}
