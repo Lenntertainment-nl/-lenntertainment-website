@@ -3055,7 +3055,7 @@ font-size: clamp(52px, 5vw, 82px);
   min-height: 100vh;
 
   color: #f4f0e8;
-  background: #080a0d;
+  background:  transparent;
 }
 
 
@@ -3063,22 +3063,7 @@ font-size: clamp(52px, 5vw, 82px);
    GHETTOBLASTER ACHTERGROND
    ================================================== */
 
-.label-boombox {
-  position: absolute;
-  inset: 0;
 
-  z-index: 0;
-
-  background-image: url("../images/records-ghettoblaster-new.png");
-
-  background-size: cover;
-  background-position: center top;
-  background-repeat: no-repeat;
-
-  opacity: .88;
-
-  pointer-events: none;
-}
 
 
 /* Donkere/copper film over achtergrond */
@@ -3679,7 +3664,7 @@ font-size: clamp(52px, 5vw, 82px);
    ZAKELIJK — COMPACT / ABOUT STYLE
    ========================================================= */
 
-@media (min-width: 769px) {
+@media (min-width: 0px) {
 
   /* Donker → warm koperbruin, zoals About */
   body:has(.business-page),
@@ -3763,7 +3748,7 @@ font-size: clamp(52px, 5vw, 82px);
    CONTACT — COMPACT / ABOUT STYLE
    ========================================================= */
 
-@media (min-width: 769px) {
+@media (min-width: 0px) {
 
   .contact-page {
     background:
@@ -6069,4 +6054,1638 @@ transform:translateY(:10px);
     width:360px !important;
     max-width:calc(100vw - 56px) !important;
   }
+}
+
+/* =========================================================
+   ABOUT — IPHONE: GEEN DUBBELE CEO-FOTO
+   ========================================================= */
+
+@media (max-width:600px){
+
+  /* Hero-foto blijft behouden */
+
+  /* Tweede CEO-foto in de bio verbergen */
+  .about-story-manifest .about-story-ceo{
+    display:none !important;
+  }
+
+  /* Bio sluit daarna netjes aan */
+  .about-story-big{
+    margin-bottom:24px !important;
+  }
+
+  .about-story-copy{
+    margin-top:0 !important;
+    padding-top:0 !important;
+  }
+}
+
+/* =========================================================
+   LENNERTERTAINMENT — MOBILE NAVIGATION
+   ========================================================= */
+
+/* Hamburger standaard verbergen op desktop */
+.new-menu-toggle{
+  display:none;
+}
+
+
+/* Mobiel + tablet */
+@media (max-width:900px){
+
+  .new-header{
+    position:relative !important;
+  }
+
+  /* Hamburger */
+  .new-menu-toggle{
+    display:flex !important;
+    position:absolute !important;
+    top:50% !important;
+    right:28px !important;
+    transform:translateY(-50%) !important;
+
+    width:42px !important;
+    height:42px !important;
+    padding:9px !important;
+
+    flex-direction:column !important;
+    justify-content:center !important;
+    gap:5px !important;
+
+    background:transparent !important;
+    border:0 !important;
+    cursor:pointer !important;
+    z-index:1002 !important;
+  }
+
+  .new-menu-toggle span{
+    display:block !important;
+    width:100% !important;
+    height:2px !important;
+    background:#fff !important;
+    border-radius:2px !important;
+    transition:
+      transform .25s ease,
+      opacity .25s ease !important;
+  }
+
+
+  /* Navigatie standaard dicht */
+  .new-nav{
+    display:none !important;
+
+    position:absolute !important;
+    top:100% !important;
+    left:0 !important;
+    right:0 !important;
+
+    padding:26px 28px 30px !important;
+
+    flex-direction:column !important;
+    align-items:flex-start !important;
+    gap:0 !important;
+
+    background:rgba(7,8,10,.98) !important;
+    border-top:1px solid rgba(255,255,255,.10) !important;
+    border-bottom:1px solid rgba(141,61,12,.55) !important;
+
+    z-index:1000 !important;
+  }
+
+
+  /* Menu geopend */
+  .new-header.menu-open .new-nav{
+    display:flex !important;
+  }
+
+
+  /* Links */
+  .new-nav a{
+    display:block !important;
+    width:100% !important;
+
+    padding:15px 0 !important;
+
+    color:#fff !important;
+    font-size:14px !important;
+    font-weight:600 !important;
+    letter-spacing:.14em !important;
+
+    border-bottom:1px solid rgba(255,255,255,.08) !important;
+  }
+
+  .new-nav a:last-child{
+    border-bottom:0 !important;
+  }
+
+  .new-nav a.active{
+    color:#b85b24 !important;
+  }
+
+
+  /* Hamburger wordt X wanneer menu open is */
+  .new-header.menu-open .new-menu-toggle span:nth-child(1){
+    transform:translateY(7px) rotate(45deg) !important;
+  }
+
+  .new-header.menu-open .new-menu-toggle span:nth-child(2){
+    opacity:0 !important;
+  }
+
+  .new-header.menu-open .new-menu-toggle span:nth-child(3){
+    transform:translateY(-7px) rotate(-45deg) !important;
+  }
+}
+
+
+/* Extra compact op iPhone */
+@media (max-width:600px){
+
+  .new-menu-toggle{
+    right:20px !important;
+    width:38px !important;
+    height:38px !important;
+  }
+
+  .new-nav{
+    padding:18px 28px 24px !important;
+  }
+
+  .new-nav a{
+    padding:13px 0 !important;
+    font-size:13px !important;
+  }
+}
+
+/* =========================================================
+   MOBILE NAVIGATION
+   ========================================================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+  const header = document.querySelector(".new-header");
+  const toggle = document.querySelector(".new-menu-toggle");
+
+  if (!header || !toggle) return;
+
+  toggle.addEventListener("click", () => {
+    const isOpen = header.classList.toggle("menu-open");
+
+    toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    toggle.setAttribute(
+      "aria-label",
+      isOpen ? "Menu sluiten" : "Menu openen"
+    );
+  });
+
+  header.querySelectorAll(".new-nav a").forEach((link) => {
+    link.addEventListener("click", () => {
+      header.classList.remove("menu-open");
+      toggle.setAttribute("aria-expanded", "false");
+      toggle.setAttribute("aria-label", "Menu openen");
+    });
+  });
+});
+
+/* =========================================================
+   ZAKELIJK — MOBILE FINAL
+   Zelfde ontwerp, één kolom op kleine schermen
+   ========================================================= */
+
+@media (max-width:700px){
+
+  /* Hero */
+  .business-page .page-hero{
+    min-height:0 !important;
+    padding:42px 28px 46px !important;
+  }
+
+  .business-page .page-hero h1{
+    font-size:48px !important;
+    line-height:.88 !important;
+    letter-spacing:-.05em !important;
+    margin:0 0 24px !important;
+  }
+
+  .business-page .page-hero p{
+    max-width:100% !important;
+    font-size:16px !important;
+    line-height:1.55 !important;
+  }
+
+
+  /* Zakelijke inhoud */
+  .business-page .content-section{
+    padding:44px 28px 50px !important;
+  }
+
+  .business-page .two-col{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    gap:32px !important;
+  }
+
+  .business-page .eyebrow{
+    margin-bottom:12px !important;
+    font-size:11px !important;
+    letter-spacing:.15em !important;
+  }
+
+  .business-page .two-col h2{
+    max-width:100% !important;
+    margin:0 !important;
+    font-size:36px !important;
+    line-height:.98 !important;
+    letter-spacing:-.035em !important;
+  }
+
+
+  /* Tekst */
+  .business-page .prose{
+    max-width:100% !important;
+  }
+
+  .business-page .prose p{
+    margin:0 0 18px !important;
+    font-size:16px !important;
+    line-height:1.6 !important;
+  }
+
+
+  /* CTA */
+  .business-page .btn{
+    display:inline-flex !important;
+    width:auto !important;
+    max-width:100% !important;
+    margin-top:8px !important;
+    padding:16px 20px !important;
+
+    font-size:11px !important;
+    letter-spacing:.12em !important;
+  }
+
+
+  /* Footer netjes onder elkaar */
+  body:has(.business-page) .footer-grid{
+    grid-template-columns:1fr !important;
+    gap:28px !important;
+  }
+
+  body:has(.business-page) .footer{
+    padding:38px 28px !important;
+  }
+}
+
+/* ZAKELIJK — FORCE 1 COLUMN ON PHONE */
+@media (max-width:700px){
+
+  body.business-page main.business-page .two-col,
+  body.business-page .business-page .two-col{
+    display:grid !important;
+    grid-template-columns:minmax(0, 1fr) !important;
+    grid-template-rows:auto auto !important;
+    gap:28px !important;
+  }
+
+  body.business-page main.business-page .two-col > *,
+  body.business-page .business-page .two-col > *{
+    width:100% !important;
+    max-width:100% !important;
+    min-width:0 !important;
+    grid-column:1 !important;
+  }
+}
+
+/* =========================================================
+   CONTACT — MOBILE FINAL
+   Nieuw ontwerp behouden op iPhone + kleine iPad
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  /* Hele contactpagina donker houden */
+  body:has(.contact-page),
+  .contact-page {
+    background:
+      linear-gradient(
+        145deg,
+        #080a0d 0%,
+        #080a0d 45%,
+        #151016 72%,
+        #32170c 100%
+      ) !important;
+    color:#fff !important;
+  }
+
+  /* HERO */
+  .contact-page .page-hero {
+    min-height:0 !important;
+    padding:52px 28px 48px !important;
+    background:transparent !important;
+    color:#fff !important;
+  }
+
+  .contact-page .page-hero .wrap {
+    width:100% !important;
+    max-width:none !important;
+    margin:0 !important;
+    padding:0 !important;
+  }
+
+  .contact-page .page-hero h1 {
+    margin:8px 0 18px !important;
+    font-size:clamp(52px, 14vw, 74px) !important;
+    line-height:.86 !important;
+    letter-spacing:-.055em !important;
+    color:#fff !important;
+  }
+
+  .contact-page .page-hero p {
+    max-width:620px !important;
+    margin:0 !important;
+    font-size:16px !important;
+    line-height:1.55 !important;
+    color:rgba(255,255,255,.78) !important;
+  }
+
+
+  /* CONTACTGEDEELTE */
+  .contact-page .content-section {
+    padding:44px 28px 60px !important;
+    background:transparent !important;
+    color:#fff !important;
+  }
+
+  .contact-page .content-section > .wrap {
+    width:100% !important;
+    max-width:none !important;
+    margin:0 !important;
+    padding:0 !important;
+  }
+
+  /* Desktop twee kolommen -> mobiel onder elkaar */
+  .contact-page .two-col {
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    gap:38px !important;
+    width:100% !important;
+  }
+
+  /* Direct / Contact */
+  .contact-page .eyebrow {
+    color:#b96532 !important;
+  }
+
+  .contact-page .content-section h2 {
+    margin:8px 0 18px !important;
+    color:#fff !important;
+    font-size:38px !important;
+    line-height:1 !important;
+  }
+
+  .contact-page .content-section p,
+  .contact-page .content-section a {
+    color:rgba(255,255,255,.82) !important;
+  }
+
+
+  /* FORMULIER ALTIJD TONEN */
+  .contact-page form {
+    display:block !important;
+    width:100% !important;
+    max-width:none !important;
+    margin:0 !important;
+  }
+
+  .contact-page input,
+  .contact-page select,
+  .contact-page textarea {
+    display:block !important;
+    width:100% !important;
+    box-sizing:border-box !important;
+
+    margin:0 0 12px !important;
+    padding:14px 15px !important;
+
+    background:rgba(8,10,13,.42) !important;
+    border:1px solid rgba(255,255,255,.30) !important;
+    border-radius:0 !important;
+
+    color:#fff !important;
+    font:inherit !important;
+    font-size:16px !important;
+  }
+
+  .contact-page textarea {
+    min-height:130px !important;
+    resize:vertical !important;
+  }
+
+  .contact-page input::placeholder,
+  .contact-page textarea::placeholder {
+    color:rgba(255,255,255,.65) !important;
+    opacity:1 !important;
+  }
+
+  .contact-page select {
+    color:#fff !important;
+  }
+
+  .contact-page option {
+    color:#111 !important;
+    background:#fff !important;
+  }
+
+
+  /* VERSTUURKNOP */
+  .contact-page form button,
+  .contact-page form .btn {
+    display:block !important;
+    width:100% !important;
+    min-height:52px !important;
+    margin-top:4px !important;
+    padding:15px 18px !important;
+
+    background:#fff !important;
+    border:1px solid #fff !important;
+    border-radius:0 !important;
+
+    color:#111 !important;
+    font-size:11px !important;
+    font-weight:700 !important;
+    letter-spacing:.14em !important;
+    text-transform:uppercase !important;
+  }
+
+
+  /* Kleine tekst onder formulier */
+  .contact-page form + p,
+  .contact-page .form-note {
+    margin-top:12px !important;
+    color:rgba(255,255,255,.55) !important;
+    font-size:11px !important;
+    line-height:1.5 !important;
+  }
+
+
+  /* Footer ook donker houden */
+  body:has(.contact-page) .footer {
+    background:#0b0d10 !important;
+    color:#fff !important;
+  }
+
+  body:has(.contact-page) .footer a {
+    color:#fff !important;
+  }
+}
+
+/* =========================================================
+   ASK LENN — MOBILE / TABLET POSITION FINAL
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .ai-chat-launcher {
+    position:fixed !important;
+
+  right:18px !important;
+top:90px !important;
+bottom:auto !important;
+
+    width:auto !important;
+    min-width:128px !important;
+    height:50px !important;
+    padding:0 22px !important;
+
+    border-radius:999px !important;
+
+    font-size:11px !important;
+    letter-spacing:.15em !important;
+
+    z-index:9999 !important;
+  }
+
+  /* Zorg dat de onderkant van pagina's ruimte heeft
+     zodat ASK LENN niets belangrijks afdekt */
+  body {
+    padding-bottom:82px !important;
+  }
+}
+
+/* =========================================================
+   LENNERtainment — MISSIE FINAL
+   Desktop + iPad + iPhone
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   BASIS
+   --------------------------------------------------------- */
+
+.mission-new{
+  position:relative;
+  overflow:hidden;
+  background:#090a0c;
+  color:#fff;
+}
+
+.mission-new small{
+  display:block;
+  color:#b76838;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.20em;
+  text-transform:uppercase;
+}
+
+
+/* =========================================================
+   HERO — MAKEN. DOEN. BLIJVEN.
+   ========================================================= */
+
+.mission-new-hero{
+  position:relative;
+  isolation:isolate;
+  min-height:620px;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+
+  background:
+    radial-gradient(
+      circle at 82% 46%,
+      rgba(141,61,12,.48) 0%,
+      rgba(141,61,12,.20) 25%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 18% 78%,
+      rgba(32,55,92,.26) 0%,
+      transparent 42%
+    ),
+    linear-gradient(
+      115deg,
+      #08090b 0%,
+      #0c0d10 48%,
+      #241208 78%,
+      #39190b 100%
+    );
+}
+
+
+/* subtiele bewegende gloed */
+
+.mission-new-hero::before{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  width:620px;
+  height:620px;
+  right:-120px;
+  top:0;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(184,82,26,.22) 0%,
+      rgba(93,39,13,.12) 38%,
+      transparent 68%
+    );
+
+  filter:blur(8px);
+  animation:missionGlow 12s ease-in-out infinite alternate;
+}
+
+@keyframes missionGlow{
+  from{
+    transform:translate3d(-20px,-20px,0) scale(1);
+    opacity:.70;
+  }
+
+  to{
+    transform:translate3d(45px,25px,0) scale(1.15);
+    opacity:1;
+  }
+}
+
+
+.mission-new-hero-inner{
+  position:relative;
+  width:100%;
+  padding-top:90px;
+  padding-bottom:90px;
+}
+
+
+.mission-new-hero small{
+  margin-bottom:20px;
+}
+
+
+.mission-new-hero h1{
+  max-width:900px;
+  margin:0;
+
+  color:#fff;
+  font-size:clamp(76px,8.5vw,138px);
+  font-weight:900;
+  line-height:.78;
+  letter-spacing:-.065em;
+  text-transform:uppercase;
+}
+
+
+.mission-new-line{
+  display:block;
+  width:90px;
+  height:3px;
+  margin:38px 0 28px;
+
+  background:#8D3D0C;
+}
+
+
+.mission-new-hero p{
+  max-width:640px;
+  margin:0;
+
+  color:rgba(255,255,255,.74);
+  font-size:18px;
+  line-height:1.6;
+}
+
+
+/* =========================================================
+   INTRO — WAAR HET OM DRAAIT
+   ========================================================= */
+
+.mission-new-intro{
+  position:relative;
+  padding:110px 0;
+
+  background:
+    linear-gradient(
+      110deg,
+      #101114 0%,
+      #101114 60%,
+      #211109 100%
+    );
+
+  border-top:1px solid rgba(255,255,255,.08);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+
+.mission-new-intro-grid{
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:100px;
+  align-items:start;
+}
+
+
+.mission-new-intro small{
+  margin-bottom:18px;
+}
+
+
+.mission-new-intro h2{
+  max-width:570px;
+  margin:0;
+
+  color:#fff;
+  font-size:clamp(48px,5vw,78px);
+  font-weight:900;
+  line-height:.90;
+  letter-spacing:-.055em;
+}
+
+
+.mission-new-intro-copy{
+  max-width:620px;
+  padding-top:32px;
+}
+
+
+.mission-new-intro-copy p{
+  margin:0 0 24px;
+
+  color:rgba(255,255,255,.68);
+  font-size:17px;
+  line-height:1.7;
+}
+
+
+.mission-new-intro-copy .mission-new-lead{
+  color:#fff;
+  font-size:22px;
+  font-weight:700;
+  line-height:1.5;
+}
+
+
+/* =========================================================
+   DRIE PRINCIPES
+   ========================================================= */
+
+.mission-new-principles{
+  position:relative;
+  padding:110px 0 125px;
+
+  background:
+    radial-gradient(
+      circle at 100% 100%,
+      rgba(141,61,12,.18),
+      transparent 32%
+    ),
+    #090a0c;
+}
+
+
+.mission-new-heading{
+  margin-bottom:52px;
+}
+
+
+.mission-new-heading small{
+  margin-bottom:12px;
+}
+
+
+.mission-new-heading h2{
+  margin:0;
+
+  color:#fff;
+  font-size:52px;
+  font-weight:900;
+  line-height:.95;
+  letter-spacing:-.045em;
+}
+
+
+.mission-new-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1px;
+
+  border-top:1px solid rgba(255,255,255,.14);
+  border-bottom:1px solid rgba(255,255,255,.14);
+}
+
+
+.mission-new-card{
+  position:relative;
+  min-height:390px;
+  padding:42px 36px 44px;
+
+  background:rgba(255,255,255,.018);
+  border-right:1px solid rgba(255,255,255,.12);
+
+  transition:
+    background .35s ease,
+    transform .35s ease;
+}
+
+
+.mission-new-card:last-child{
+  border-right:0;
+}
+
+
+.mission-new-card:hover{
+  background:
+    linear-gradient(
+      145deg,
+      rgba(141,61,12,.18),
+      rgba(255,255,255,.025)
+    );
+
+  transform:translateY(-5px);
+}
+
+
+.mission-new-card > span{
+  display:block;
+  margin-bottom:90px;
+
+  color:#a9582d;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.18em;
+}
+
+
+.mission-new-card h3{
+  max-width:280px;
+  margin:0 0 22px;
+
+  color:#fff;
+  font-size:32px;
+  font-weight:800;
+  line-height:1.02;
+  letter-spacing:-.035em;
+}
+
+
+.mission-new-card p{
+  max-width:330px;
+  margin:0;
+
+  color:rgba(255,255,255,.62);
+  font-size:15px;
+  line-height:1.65;
+}
+
+
+/* =========================================================
+   SLOT — MORE THAN ONE BEAT
+   ========================================================= */
+
+.mission-new-ending{
+  position:relative;
+  padding:125px 0 135px;
+  overflow:hidden;
+
+  background:
+    radial-gradient(
+      circle at 82% 55%,
+      rgba(141,61,12,.40),
+      transparent 35%
+    ),
+    linear-gradient(
+      110deg,
+      #0a0b0d 0%,
+      #111215 56%,
+      #311508 100%
+    );
+
+  border-top:1px solid rgba(255,255,255,.08);
+}
+
+
+.mission-new-ending::after{
+  content:"";
+  position:absolute;
+  width:420px;
+  height:420px;
+  right:-160px;
+  bottom:-180px;
+
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:50%;
+}
+
+
+.mission-new-ending-inner{
+  position:relative;
+  z-index:2;
+}
+
+
+.mission-new-ending small{
+  margin-bottom:22px;
+}
+
+
+.mission-new-ending h2{
+  max-width:900px;
+  margin:0 0 34px;
+
+  color:#fff;
+  font-size:clamp(62px,7vw,108px);
+  font-weight:900;
+  line-height:.86;
+  letter-spacing:-.06em;
+}
+
+
+.mission-new-ending p{
+  max-width:650px;
+  margin:0;
+
+  color:rgba(255,255,255,.68);
+  font-size:18px;
+  line-height:1.65;
+}
+
+
+/* =========================================================
+   IPAD / TABLET
+   ========================================================= */
+
+@media (min-width:601px) and (max-width:900px){
+
+  .mission-new-hero{
+    min-height:560px !important;
+  }
+
+  .mission-new-hero-inner{
+    padding-top:72px !important;
+    padding-bottom:72px !important;
+  }
+
+  .mission-new-hero h1{
+    font-size:82px !important;
+    line-height:.82 !important;
+  }
+
+  .mission-new-hero p{
+    max-width:580px !important;
+    font-size:17px !important;
+  }
+
+
+  .mission-new-intro{
+    padding:78px 0 !important;
+  }
+
+  .mission-new-intro-grid{
+    grid-template-columns:1fr !important;
+    gap:42px !important;
+  }
+
+  .mission-new-intro h2{
+    max-width:620px !important;
+    font-size:58px !important;
+  }
+
+  .mission-new-intro-copy{
+    max-width:650px !important;
+    padding-top:0 !important;
+  }
+
+
+  .mission-new-principles{
+    padding:78px 0 90px !important;
+  }
+
+  .mission-new-grid{
+    grid-template-columns:1fr !important;
+  }
+
+  .mission-new-card{
+    min-height:0 !important;
+    padding:36px !important;
+
+    border-right:0 !important;
+    border-bottom:1px solid rgba(255,255,255,.12);
+  }
+
+  .mission-new-card:last-child{
+    border-bottom:0 !important;
+  }
+
+  .mission-new-card > span{
+    margin-bottom:40px !important;
+  }
+
+  .mission-new-card h3{
+    max-width:none !important;
+    font-size:34px !important;
+  }
+
+  .mission-new-card p{
+    max-width:600px !important;
+    font-size:16px !important;
+  }
+
+
+  .mission-new-ending{
+    padding:90px 0 !important;
+  }
+
+  .mission-new-ending h2{
+    font-size:68px !important;
+  }
+
+}
+
+
+/* =========================================================
+   IPHONE / MOBILE
+   ========================================================= */
+
+@media (max-width:600px){
+
+  .mission-new .wrap{
+    width:auto !important;
+    max-width:none !important;
+    margin-left:0 !important;
+    margin-right:0 !important;
+    padding-left:26px !important;
+    padding-right:26px !important;
+  }
+
+
+  /* HERO */
+
+  .mission-new-hero{
+    min-height:0 !important;
+    display:block !important;
+
+    background:
+      radial-gradient(
+        circle at 92% 38%,
+        rgba(141,61,12,.38),
+        transparent 45%
+      ),
+      linear-gradient(
+        145deg,
+        #08090b 0%,
+        #101014 62%,
+        #281208 100%
+      ) !important;
+  }
+
+
+  .mission-new-hero::before{
+    width:360px !important;
+    height:360px !important;
+    right:-180px !important;
+    top:80px !important;
+  }
+
+
+  .mission-new-hero-inner{
+    padding-top:58px !important;
+    padding-bottom:64px !important;
+  }
+
+
+  .mission-new-hero small{
+    margin-bottom:16px !important;
+    font-size:9px !important;
+  }
+
+
+  .mission-new-hero h1{
+    max-width:100% !important;
+    margin:0 !important;
+
+    font-size:54px !important;
+    line-height:.82 !important;
+    letter-spacing:-.055em !important;
+  }
+
+
+  .mission-new-line{
+    width:60px !important;
+    margin:30px 0 24px !important;
+  }
+
+
+  .mission-new-hero p{
+    max-width:none !important;
+    margin:0 !important;
+
+    font-size:16px !important;
+    line-height:1.55 !important;
+  }
+
+
+  /* INTRO */
+
+  .mission-new-intro{
+    padding:58px 0 62px !important;
+  }
+
+
+  .mission-new-intro-grid{
+    display:block !important;
+  }
+
+
+  .mission-new-intro small{
+    margin-bottom:14px !important;
+    font-size:9px !important;
+  }
+
+
+  .mission-new-intro h2{
+    max-width:none !important;
+
+    font-size:43px !important;
+    line-height:.91 !important;
+    letter-spacing:-.05em !important;
+  }
+
+
+  .mission-new-intro-copy{
+    max-width:none !important;
+    padding-top:36px !important;
+  }
+
+
+  .mission-new-intro-copy .mission-new-lead{
+    font-size:19px !important;
+    line-height:1.45 !important;
+  }
+
+
+  .mission-new-intro-copy p{
+    font-size:15.5px !important;
+    line-height:1.65 !important;
+  }
+
+
+  /* PRINCIPES */
+
+  .mission-new-principles{
+    padding:58px 0 64px !important;
+  }
+
+
+  .mission-new-heading{
+    margin-bottom:32px !important;
+  }
+
+
+  .mission-new-heading small{
+    font-size:9px !important;
+  }
+
+
+  .mission-new-heading h2{
+    font-size:39px !important;
+  }
+
+
+  .mission-new-grid{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    gap:0 !important;
+  }
+
+
+  .mission-new-card{
+    min-height:0 !important;
+    padding:32px 0 36px !important;
+
+    background:transparent !important;
+
+    border-right:0 !important;
+    border-bottom:1px solid rgba(255,255,255,.13) !important;
+  }
+
+
+  .mission-new-card:last-child{
+    border-bottom:0 !important;
+  }
+
+
+  .mission-new-card > span{
+    margin-bottom:24px !important;
+
+    color:#b76838 !important;
+    font-size:10px !important;
+  }
+
+
+  .mission-new-card h3{
+    max-width:none !important;
+    margin-bottom:16px !important;
+
+    font-size:30px !important;
+    line-height:1 !important;
+  }
+
+
+  .mission-new-card p{
+    max-width:none !important;
+
+    font-size:15.5px !important;
+    line-height:1.6 !important;
+  }
+
+
+  /* SLOT */
+
+  .mission-new-ending{
+    padding:64px 0 78px !important;
+  }
+
+
+  .mission-new-ending small{
+    margin-bottom:16px !important;
+    font-size:9px !important;
+  }
+
+
+  .mission-new-ending h2{
+    max-width:none !important;
+    margin-bottom:26px !important;
+
+    font-size:49px !important;
+    line-height:.88 !important;
+  }
+
+
+  .mission-new-ending p{
+    max-width:none !important;
+
+    font-size:16px !important;
+    line-height:1.6 !important;
+  }
+
+}
+
+
+/* =========================================================
+   TOEGANKELIJKHEID — GEEN ANIMATIE INDIEN UITGESCHAKELD
+   ========================================================= */
+
+@media (prefers-reduced-motion:reduce){
+
+  .mission-new-hero::before{
+    animation:none !important;
+  }
+
+}
+
+/* =========================================================
+   MISSIE — ASK LENN MOBIEL RECHTSONDER
+   Contact blijft onaangetast
+   ========================================================= */
+
+@media (max-width:768px){
+
+  body:has(.mission-new) .ai-chat-launcher{
+    position:fixed !important;
+
+    top:auto !important;
+    right:18px !important;
+    bottom:18px !important;
+
+    z-index:9999 !important;
+  }
+
+}
+
+/* =========================================
+   MISSIE — VIDEO ACHTERGROND
+   ========================================= */
+
+/* =========================================
+   MISSIE — VIDEO OVER GEHELE ACHTERGROND
+   ========================================= */
+
+.mission-new {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: #070b12;
+}
+
+.mission-bg-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  z-index: -2;
+}
+
+/* Donkere laag over de volledige video */
+.mission-new::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      90deg,
+rgba(5, 8, 14, 0.48) 0%,
+rgba(5, 8, 14, 0.38) 45%,
+rgba(5, 8, 14, 0.30) 100%
+    );
+}
+
+/* Alle missie-secties transparant zodat de video zichtbaar blijft */
+.mission-new-hero,
+.mission-new-intro,
+.mission-new-principles,
+.mission-new-ending {
+  position: relative;
+  background: transparent !important;
+}
+
+/* Hero terug naar normale hoogte */
+.mission-new-hero {
+  min-height: auto;
+}
+
+/* MISSIE — opschonen over video */
+
+/* Oude witte scheidingslijnen verwijderen */
+.mission-new-intro,
+.mission-new-principles,
+.mission-new-ending,
+.mission-new-card {
+  border: none !important;
+  border-top: none !important;
+  border-bottom: none !important;
+  border-left: none !important;
+  border-right: none !important;
+}
+
+/* Ook eventuele lijnen van de grid verwijderen */
+.mission-new-grid {
+  border: none !important;
+}
+
+.mission-new-grid .mission-new-card {
+  border: none !important;
+}
+
+/* Meer ruimte aan de rechterzijde van het introblok */
+.mission-new-intro-grid {
+  padding-left: 4vw;
+  padding-right: 7vw;
+  box-sizing: border-box;
+}
+
+.mission-new-hero {
+  border: none !important;
+  border-bottom: none !important;
+}
+
+/* DRIE PRINCIPES — volledig transparant */
+.mission-new-principles,
+.mission-new-grid,
+.mission-new-card {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+/* MISSIE — GLASS CARDS PRINCIPES */
+
+.mission-new-card {
+  background: rgba(8, 12, 20, 0.48) !important;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border: 1px solid rgba(255, 255, 255, 0.07) !important;
+  border-radius: 16px;
+
+  padding: 22px 24px !important;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.20);
+
+  align-self: end;
+  height: auto !important;
+  min-height: 0 !important;
+}
+
+/* MISSIE — DRIE LOSSE GLASS CARDS */
+
+.mission-new-grid {
+  gap: 24px !important;
+}
+
+.mission-new-card {
+  /* MISSIE — DRIE LOSSE GLASS CARDS */
+
+.mission-new-grid {
+  gap: 24px !important;
+}
+
+.mission-new-card {
+  background: rgba(8, 12, 20, 0.46) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  border: 1px solid rgba(255,255,255,0.06) !important;
+  border-radius: 16px !important;
+
+  padding: 24px 26px !important;
+
+  box-shadow:
+    0 12px 35px rgba(0,0,0,0.22) !important;
+}
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  border: 1px solid rgba(255,255,255,0.06) !important;
+  border-radius: 16px !important;
+
+  padding: 24px 26px !important;
+
+  box-shadow:
+    0 12px 35px rgba(0,0,0,0.22) !important;
+}
+
+.mission-new-card {
+  min-height: 0 !important;
+  height: auto !important;
+  padding: 20px 24px !important;
+}
+
+.mission-new-grid {
+  align-items: end !important;
+}
+
+/* MISSIE — GLASS TEKSTVLAK PRINCIPES */
+
+.mission-card-glass {
+  background: rgba(8, 14, 25, 0.12);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+
+  padding: 22px 24px;
+}
+
+/* =========================================
+   MISSIE — COMPACTE GLASS PRINCIPES
+   ========================================= */
+
+.mission-new-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 18px !important;
+  align-items: stretch !important;
+}
+
+.mission-new-card {
+  min-height: 0 !important;
+  height: auto !important;
+  padding: 22px 24px 24px !important;
+
+  background: rgba(8, 14, 25, 0.24) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+
+  border: 1px solid rgba(255, 255, 255, 0.07) !important;
+  border-radius: 14px !important;
+
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+}
+
+.mission-new-card > span {
+  display: block !important;
+  margin: 0 0 28px 0 !important;
+}
+
+.mission-new-card .mission-card-glass {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.mission-new-card h3 {
+  margin: 0 0 8px 0 !important;
+}
+
+.mission-new-card p {
+  margin: 0 !important;
+}
+
+/* MISSIE — HERO IETS NAAR RECHTS */
+@media (min-width: 769px) {
+  .mission-new-hero-inner {
+    padding-left: 70px !important;
+  }
+}
+
+/* MISSIE — SLOT KRACHTIGER */
+
+@media (min-width: 769px) {
+
+  .mission-new-ending-inner {
+    max-width: 760px !important;
+    margin: 0 auto !important;
+    padding: 38px 42px 42px !important;
+
+    background: rgba(7, 11, 20, 0.34) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border-radius: 18px;
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .mission-new-ending-inner h2 {
+    font-size: clamp(38px, 3.5vw, 58px) !important;
+    line-height: .95 !important;
+    margin-top: 12px !important;
+    margin-bottom: 24px !important;
+  }
+
+  .mission-new-ending-inner p {
+    max-width: 620px !important;
+    font-size: 16px !important;
+    line-height: 1.55 !important;
+  }
+}
+
+/* =========================================
+   MISSIE — MOBIEL DEFINITIEF
+   ========================================= */
+
+@media (max-width: 768px) {
+
+  /* Principes onder elkaar */
+  body:has(.mission-new) .mission-new-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+    width: 100% !important;
+  }
+
+  /* Iedere kaart volledige breedte */
+  body:has(.mission-new) .mission-new-card {
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    height: auto !important;
+
+    padding: 26px 24px !important;
+
+    background: rgba(8, 14, 25, 0.46) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+
+    border: 1px solid rgba(255,255,255,0.10) !important;
+    border-radius: 16px !important;
+  }
+
+  body:has(.mission-new) .mission-new-card h3 {
+    font-size: 30px !important;
+    line-height: 0.98 !important;
+    margin: 24px 0 12px !important;
+    max-width: none !important;
+  }
+
+  body:has(.mission-new) .mission-new-card p {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+    max-width: none !important;
+  }
+
+  /* Slotblok ook netjes mobiel */
+  body:has(.mission-new) .mission-new-ending-inner {
+    width: calc(100% - 32px) !important;
+    max-width: none !important;
+    margin: 0 auto !important;
+    padding: 32px 24px !important;
+  }
+
+  body:has(.mission-new) .mission-new-ending h2 {
+    font-size: 38px !important;
+    line-height: 0.98 !important;
+  }
+
+  /* ASK LENN */
+  body:has(.mission-new) .ai-chat-launcher {
+    position: fixed !important;
+    top: auto !important;
+    right: 18px !important;
+    bottom: 18px !important;
+    z-index: 9999 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  body:has(.mission-new) .ai-chat-launcher {
+    right: 12px !important;
+    bottom: 12px !important;
+    padding: 12px 18px !important;
+    font-size: 11px !important;
+  }
+}
+
+/* RECORDS — VIDEO BACKGROUND */
+.records-video-bg {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* RECORDS — CTA ONDERAAN OVER DE VINYL */
+.label-page .label-cta {
+  position: absolute !important;
+  top: auto !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  margin: 0 !important;
+  padding: 18px 0 20px !important;
+  z-index: 5;
+  background: rgba(5, 10, 18, 0.78);
 }
